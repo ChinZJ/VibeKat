@@ -14,9 +14,12 @@ git clone https://github.com/YOUR_USERNAME/kattis-tracker.git
 cd kattis-tracker
 ```
 
-### Install requirements
-- `pip install -r requirements.txt`
-- `playwright install chromium`
+### Install requirements (tested for WSL2)
+- Create a python environment `python3 -m venv venv`
+- Activate using `source venv/bin/activate`
+- Change directory into the scraper folder `cd scraper`
+- Run `pip install -r requirements.txt`
+- Run `playwright install chromium`
 
 ### 2. Create a `.env` file
 Add `KATTIS_USERNAME` and `KATTIS_PASSWORD` to it.
