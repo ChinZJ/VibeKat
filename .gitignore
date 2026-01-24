@@ -26,8 +26,6 @@ Thumbs.db
 # Don't ignore data.json - it needs to be committed for GitHub Pages
 # !docs/data.json
 
-# Solutions
-solutions/*
 
 # Personal excel
 Grind.xlsx
