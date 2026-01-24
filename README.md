@@ -3,8 +3,6 @@
 
 A GitHub Pages dashboard to track your [Open Kattis](https://open.kattis.com) progress. 
 
-![Dashboard Preview](https://img.shields.io/badge/Score-Track%20It!-brightgreen)
-
 ---
 
 ## Setup
