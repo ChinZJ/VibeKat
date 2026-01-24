@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local testing
+.kattisrc
+*.log
+
+# Don't ignore data.json - it needs to be committed for GitHub Pages
+# !docs/data.json
+
+# Solutions
+solutions/*
+
+# Personal excel
+Grind.xlsx
+~$Grind.xlsx
