@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-01-24T18:05:46.686593Z",
-  "username": "chin-zhen-jie\r",
-  "total_score": 596.4,
-  "calculated_score": 595.4,
-  "problems_solved": 207,
+  "generated_at": "2026-01-25T09:40:35.058045Z",
+  "username": "chin-zhen-jie",
+  "total_score": 636.3,
+  "calculated_score": 635.3,
+  "problems_solved": 215,
   "problems": [
     {
       "id": "includescoring",
       "name": "#include<scoring>",
-      "difficulty": 5.3,
+      "difficulty": 5.2,
       "url": "https://open.kattis.com/problems/includescoring"
     },
     {
@@ -42,9 +42,15 @@
       "url": "https://open.kattis.com/problems/addemup"
     },
     {
+      "id": "administrativeproblems",
+      "name": "Administrative Difficulties",
+      "difficulty": 6.1,
+      "url": "https://open.kattis.com/problems/administrativeproblems"
+    },
+    {
       "id": "dream",
       "name": "All Just A Dream",
-      "difficulty": 5.3,
+      "difficulty": 5.2,
       "url": "https://open.kattis.com/problems/dream"
     },
     {
@@ -120,6 +126,12 @@
       "url": "https://open.kattis.com/problems/averagespeed"
     },
     {
+      "id": "babynames",
+      "name": "Baby Names",
+      "difficulty": 5.5,
+      "url": "https://open.kattis.com/problems/babynames"
+    },
+    {
       "id": "basicprogramming1",
       "name": "Basic Programming 1",
       "difficulty": 4.1,
@@ -154,6 +166,12 @@
       "name": "Best Relay Team",
       "difficulty": 1.6,
       "url": "https://open.kattis.com/problems/bestrelayteam"
+    },
+    {
+      "id": "bst",
+      "name": "Binary search tree",
+      "difficulty": 4.8,
+      "url": "https://open.kattis.com/problems/bst"
     },
     {
       "id": "birthdayboy",
@@ -312,10 +330,22 @@
       "url": "https://open.kattis.com/problems/contingencyplanning"
     },
     {
+      "id": "continuousmedian",
+      "name": "Continuous Median",
+      "difficulty": 2.8,
+      "url": "https://open.kattis.com/problems/continuousmedian"
+    },
+    {
       "id": "convoy",
       "name": "Convoy",
       "difficulty": 4.2,
       "url": "https://open.kattis.com/problems/convoy"
+    },
+    {
+      "id": "cookieselection",
+      "name": "Cookie Selection",
+      "difficulty": 4.8,
+      "url": "https://open.kattis.com/problems/cookieselection"
     },
     {
       "id": "cowcrane",
@@ -370,6 +400,12 @@
       "name": "Divide by 100...",
       "difficulty": 3.4,
       "url": "https://open.kattis.com/problems/divideby100"
+    },
+    {
+      "id": "doctorkattis",
+      "name": "Doctor Kattis",
+      "difficulty": 4.6,
+      "url": "https://open.kattis.com/problems/doctorkattis"
     },
     {
       "id": "dominos",
@@ -452,7 +488,7 @@
     {
       "id": "foosball",
       "name": "Foosball Dynasty",
-      "difficulty": 5.7,
+      "difficulty": 5.6,
       "url": "https://open.kattis.com/problems/foosball"
     },
     {
@@ -482,7 +518,7 @@
     {
       "id": "gamerank",
       "name": "Game Rank",
-      "difficulty": 4.0,
+      "difficulty": 4.1,
       "url": "https://open.kattis.com/problems/gamerank"
     },
     {
@@ -500,7 +536,7 @@
     {
       "id": "screen",
       "name": "Hacking the Screen",
-      "difficulty": 3.5,
+      "difficulty": 3.6,
       "url": "https://open.kattis.com/problems/screen"
     },
     {
@@ -580,6 +616,12 @@
       "name": "Interpreter",
       "difficulty": 3.3,
       "url": "https://open.kattis.com/problems/interpreter"
+    },
+    {
+      "id": "caching",
+      "name": "Introspective Caching",
+      "difficulty": 5.7,
+      "url": "https://open.kattis.com/problems/caching"
     },
     {
       "id": "inverteddeck",
@@ -770,7 +812,7 @@
     {
       "id": "natrij",
       "name": "Natrij",
-      "difficulty": 2.8,
+      "difficulty": 2.7,
       "url": "https://open.kattis.com/problems/natrij"
     },
     {
@@ -810,9 +852,15 @@
       "url": "https://open.kattis.com/problems/ordinals"
     },
     {
+      "id": "orphanbackups",
+      "name": "Orphan Backups",
+      "difficulty": 5.9,
+      "url": "https://open.kattis.com/problems/orphanbackups"
+    },
+    {
       "id": "pachydermpeanutpacking",
       "name": "Pachyderm Peanut Packing",
-      "difficulty": 2.7,
+      "difficulty": 2.6,
       "url": "https://open.kattis.com/problems/pachydermpeanutpacking"
     },
     {
@@ -926,7 +974,7 @@
     {
       "id": "reconstructingtapeart",
       "name": "Reconstructing Tape Art",
-      "difficulty": 4.3,
+      "difficulty": 4.4,
       "url": "https://open.kattis.com/problems/reconstructingtapeart"
     },
     {
@@ -1172,7 +1220,7 @@
     {
       "id": "turtlemaster",
       "name": "Turtle Master",
-      "difficulty": 2.9,
+      "difficulty": 2.8,
       "url": "https://open.kattis.com/problems/turtlemaster"
     },
     {
@@ -1253,7 +1301,6 @@
     "coconut",
     "conformity",
     "detaileddifferences",
-    "kattissquest",
     "lastfactorialdigit",
     "lostmap",
     "millionairemadness",
@@ -1267,9 +1314,9 @@
   ],
   "extra_solutions": [],
   "difficulty_breakdown": {
-    "Medium (2.8-5.5)": 80,
-    "Easy (<2.8)": 117,
-    "Hard (\u22655.6)": 10
+    "Medium (2.8-5.5)": 84,
+    "Easy (<2.8)": 118,
+    "Hard (\u22655.6)": 13
   },
   "daily_activity": {
     "2025-12-07": 65,
@@ -1289,10 +1336,1840 @@
     "2026-01-18": 10,
     "2026-01-19": 1,
     "2026-01-20": 22,
-    "2026-01-24": 8
+    "2026-01-24": 8,
+    "2026-01-25": 9
   },
-  "todos": [],
-  "daily_tasks": {},
+  "score_history": {
+    "2026-01-24": 596.4,
+    "2026-01-25": 636.3
+  },
+  "todos": [
+    {
+      "date": "2026-01-17",
+      "id": "knigsoftheforest",
+      "url": "https://open.kattis.com/problems/knigsoftheforest"
+    },
+    {
+      "date": "2026-01-17",
+      "id": "floppy",
+      "url": "https://open.kattis.com/problems/floppy"
+    },
+    {
+      "date": "2026-01-17",
+      "id": "tenis",
+      "url": "https://open.kattis.com/problems/tenis"
+    },
+    {
+      "date": "2026-01-17",
+      "id": "sabor",
+      "url": "https://open.kattis.com/problems/sabor"
+    },
+    {
+      "date": "2026-01-17",
+      "id": "alehouse",
+      "url": "https://open.kattis.com/problems/alehouse"
+    },
+    {
+      "date": "2026-01-17",
+      "id": "cd",
+      "url": "https://open.kattis.com/problems/cd"
+    },
+    {
+      "date": "2026-01-17",
+      "id": "babelfish",
+      "url": "https://open.kattis.com/problems/babelfish"
+    },
+    {
+      "date": "2026-01-17",
+      "id": "touchdown",
+      "url": "https://open.kattis.com/problems/touchdown"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "clinic",
+      "url": "https://open.kattis.com/problems/clinic"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "greetingcard",
+      "url": "https://open.kattis.com/problems/greetingcard"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "basicinterpreter",
+      "url": "https://open.kattis.com/problems/basicinterpreter"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "doctorkattis",
+      "url": "https://open.kattis.com/problems/doctorkattis"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "janeeyre",
+      "url": "https://open.kattis.com/problems/janeeyre"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "iforaneye",
+      "url": "https://open.kattis.com/problems/iforaneye"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "administrativeproblems",
+      "url": "https://open.kattis.com/problems/administrativeproblems"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "babynames",
+      "url": "https://open.kattis.com/problems/babynames"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "continuousmedian",
+      "url": "https://open.kattis.com/problems/continuousmedian"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "magicalcows",
+      "url": "https://open.kattis.com/problems/magicalcows"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "orphanbackups",
+      "url": "https://open.kattis.com/problems/orphanbackups"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "kattissquest",
+      "url": "https://open.kattis.com/problems/kattissquest"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "cookieselection",
+      "url": "https://open.kattis.com/problems/cookieselection"
+    },
+    {
+      "date": "2026-01-18",
+      "id": "snowflakes",
+      "url": "https://open.kattis.com/problems/snowflakes"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "cakeymccakeface",
+      "url": "https://open.kattis.com/problems/cakeymccakeface"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "abinitio",
+      "url": "https://open.kattis.com/problems/abinitio"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "chopwood",
+      "url": "https://open.kattis.com/problems/chopwood"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "traveltheskies",
+      "url": "https://open.kattis.com/problems/traveltheskies"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "alphabetanimals",
+      "url": "https://open.kattis.com/problems/alphabetanimals"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "railroad",
+      "url": "https://open.kattis.com/problems/railroad"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "unionfind",
+      "url": "https://open.kattis.com/problems/unionfind"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "control",
+      "url": "https://open.kattis.com/problems/control"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "ladice",
+      "url": "https://open.kattis.com/problems/ladice"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "chatter",
+      "url": "https://open.kattis.com/problems/chatter"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "forests",
+      "url": "https://open.kattis.com/problems/forests"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "more10",
+      "url": "https://open.kattis.com/problems/more10"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "swaptosort",
+      "url": "https://open.kattis.com/problems/swaptosort"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "virtualfriends",
+      "url": "https://open.kattis.com/problems/virtualfriends"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "fenwick",
+      "url": "https://open.kattis.com/problems/fenwick"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "moviecollection",
+      "url": "https://open.kattis.com/problems/moviecollection"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "supercomputer",
+      "url": "https://open.kattis.com/problems/supercomputer"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "turbo",
+      "url": "https://open.kattis.com/problems/turbo"
+    },
+    {
+      "date": "2026-01-19",
+      "id": "worstweather",
+      "url": "https://open.kattis.com/problems/worstweather"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "malari",
+      "url": "https://open.kattis.com/problems/malari"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "andvag",
+      "url": "https://open.kattis.com/problems/andvag"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "contestadvancement",
+      "url": "https://open.kattis.com/problems/contestadvancement"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "hringvegurinn",
+      "url": "https://open.kattis.com/problems/hringvegurinn"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "golf",
+      "url": "https://open.kattis.com/problems/golf"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "tonlistarlisti",
+      "url": "https://open.kattis.com/problems/tonlistarlisti"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "supplyroutes",
+      "url": "https://open.kattis.com/problems/supplyroutes"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "magicallights",
+      "url": "https://open.kattis.com/problems/magicallights"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "taxtherich",
+      "url": "https://open.kattis.com/problems/taxtherich"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "bloopergame",
+      "url": "https://open.kattis.com/problems/bloopergame"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "barshelf",
+      "url": "https://open.kattis.com/problems/barshelf"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "canofworms",
+      "url": "https://open.kattis.com/problems/canofworms"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "review",
+      "url": "https://open.kattis.com/problems/review"
+    },
+    {
+      "date": "2026-01-20",
+      "id": "cuckoo",
+      "url": "https://open.kattis.com/problems/cuckoo"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "raceday",
+      "url": "https://open.kattis.com/problems/raceday"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "vudu",
+      "url": "https://open.kattis.com/problems/vudu"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "guilds",
+      "url": "https://open.kattis.com/problems/guilds"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "bracketsequence",
+      "url": "https://open.kattis.com/problems/bracketsequence"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "interviewqueue",
+      "url": "https://open.kattis.com/problems/interviewqueue"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "juggler",
+      "url": "https://open.kattis.com/problems/juggler"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "killingchaos",
+      "url": "https://open.kattis.com/problems/killingchaos"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "studying",
+      "url": "https://open.kattis.com/problems/studying"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "treeshopping",
+      "url": "https://open.kattis.com/problems/treeshopping"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "crashingrobots",
+      "url": "https://open.kattis.com/problems/crashingrobots"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "traffic",
+      "url": "https://open.kattis.com/problems/traffic"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "downfall",
+      "url": "https://open.kattis.com/problems/downfall"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "parallelanalysis",
+      "url": "https://open.kattis.com/problems/parallelanalysis"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "znanstvenik",
+      "url": "https://open.kattis.com/problems/znanstvenik"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "musiccollection",
+      "url": "https://open.kattis.com/problems/musiccollection"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "sound",
+      "url": "https://open.kattis.com/problems/sound"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "thebigmacquestion",
+      "url": "https://open.kattis.com/problems/thebigmacquestion"
+    },
+    {
+      "date": "2026-01-21",
+      "id": "entertainmentbox",
+      "url": "https://open.kattis.com/problems/entertainmentbox"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "kletva",
+      "url": "https://open.kattis.com/problems/kletva"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "megainversions",
+      "url": "https://open.kattis.com/problems/megainversions"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "setstack",
+      "url": "https://open.kattis.com/problems/setstack"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "srednji",
+      "url": "https://open.kattis.com/problems/srednji"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "conversationlog",
+      "url": "https://open.kattis.com/problems/conversationlog"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "deduplicatingfiles",
+      "url": "https://open.kattis.com/problems/deduplicatingfiles"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "musicyourway",
+      "url": "https://open.kattis.com/problems/musicyourway"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "opensource",
+      "url": "https://open.kattis.com/problems/opensource"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "chartingprogress",
+      "url": "https://open.kattis.com/problems/chartingprogress"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "classy",
+      "url": "https://open.kattis.com/problems/classy"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "evenup",
+      "url": "https://open.kattis.com/problems/evenup"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "funhouse",
+      "url": "https://open.kattis.com/problems/funhouse"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "metaprogramming",
+      "url": "https://open.kattis.com/problems/metaprogramming"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "numbertree",
+      "url": "https://open.kattis.com/problems/numbertree"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "wheresmyinternet",
+      "url": "https://open.kattis.com/problems/wheresmyinternet"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "minspantree",
+      "url": "https://open.kattis.com/problems/minspantree"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "islandhopping",
+      "url": "https://open.kattis.com/problems/islandhopping"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "arcticnetwork",
+      "url": "https://open.kattis.com/problems/arcticnetwork"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "froshweek",
+      "url": "https://open.kattis.com/problems/froshweek"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "intervalcover",
+      "url": "https://open.kattis.com/problems/intervalcover"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "pivot",
+      "url": "https://open.kattis.com/problems/pivot"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "foolingaround",
+      "url": "https://open.kattis.com/problems/foolingaround"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "chocolates",
+      "url": "https://open.kattis.com/problems/chocolates"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "luckynumber",
+      "url": "https://open.kattis.com/problems/luckynumber"
+    },
+    {
+      "date": "2026-01-22",
+      "id": "antiarithmetic",
+      "url": "https://open.kattis.com/problems/antiarithmetic"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "bikegears",
+      "url": "https://open.kattis.com/problems/bikegears"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "liga",
+      "url": "https://open.kattis.com/problems/liga"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "reduction",
+      "url": "https://open.kattis.com/problems/reduction"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "goblingardenguards",
+      "url": "https://open.kattis.com/problems/goblingardenguards"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "medals",
+      "url": "https://open.kattis.com/problems/medals"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "classpicture",
+      "url": "https://open.kattis.com/problems/classpicture"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "victorythroughsynergy",
+      "url": "https://open.kattis.com/problems/victorythroughsynergy"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "squaredeal",
+      "url": "https://open.kattis.com/problems/squaredeal"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "zagrade",
+      "url": "https://open.kattis.com/problems/zagrade"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "buildingboundaries",
+      "url": "https://open.kattis.com/problems/buildingboundaries"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "dreamer",
+      "url": "https://open.kattis.com/problems/dreamer"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "towering",
+      "url": "https://open.kattis.com/problems/towering"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "islands",
+      "url": "https://open.kattis.com/problems/islands"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "walls",
+      "url": "https://open.kattis.com/problems/walls"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "gradecurving",
+      "url": "https://open.kattis.com/problems/gradecurving"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "prinova",
+      "url": "https://open.kattis.com/problems/prinova"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "growlinggears",
+      "url": "https://open.kattis.com/problems/growlinggears"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "trollhunt",
+      "url": "https://open.kattis.com/problems/trollhunt"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "falling",
+      "url": "https://open.kattis.com/problems/falling"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "disgruntledjudge",
+      "url": "https://open.kattis.com/problems/disgruntledjudge"
+    },
+    {
+      "date": "2026-01-23",
+      "id": "houselawn",
+      "url": "https://open.kattis.com/problems/houselawn"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "lipschitzconstant",
+      "url": "https://open.kattis.com/problems/lipschitzconstant"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "milestones",
+      "url": "https://open.kattis.com/problems/milestones"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "repeatingdecimal",
+      "url": "https://open.kattis.com/problems/repeatingdecimal"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "robotopia",
+      "url": "https://open.kattis.com/problems/robotopia"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "stopcounting",
+      "url": "https://open.kattis.com/problems/stopcounting"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "trick",
+      "url": "https://open.kattis.com/problems/trick"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "musicalchairs",
+      "url": "https://open.kattis.com/problems/musicalchairs"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "toys",
+      "url": "https://open.kattis.com/problems/toys"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "goodmorning",
+      "url": "https://open.kattis.com/problems/goodmorning"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "paintings",
+      "url": "https://open.kattis.com/problems/paintings"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "draughts",
+      "url": "https://open.kattis.com/problems/draughts"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "dobra",
+      "url": "https://open.kattis.com/problems/dobra"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "fruitbaskets",
+      "url": "https://open.kattis.com/problems/fruitbaskets"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "pagelayout",
+      "url": "https://open.kattis.com/problems/pagelayout"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "carvet",
+      "url": "https://open.kattis.com/problems/carvet"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "primes",
+      "url": "https://open.kattis.com/problems/primes"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "solitaire",
+      "url": "https://open.kattis.com/problems/solitaire"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "firefly",
+      "url": "https://open.kattis.com/problems/firefly"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "outofsorts",
+      "url": "https://open.kattis.com/problems/outofsorts"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "roompainting",
+      "url": "https://open.kattis.com/problems/roompainting"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "synchronizinglists",
+      "url": "https://open.kattis.com/problems/synchronizinglists"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "carefulascent",
+      "url": "https://open.kattis.com/problems/carefulascent"
+    },
+    {
+      "date": "2026-01-24",
+      "id": "freeweights",
+      "url": "https://open.kattis.com/problems/freeweights"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "monk",
+      "url": "https://open.kattis.com/problems/monk"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "suspensionbridges",
+      "url": "https://open.kattis.com/problems/suspensionbridges"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "expeditiouscubing",
+      "url": "https://open.kattis.com/problems/expeditiouscubing"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "financialplanning",
+      "url": "https://open.kattis.com/problems/financialplanning"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "hindex",
+      "url": "https://open.kattis.com/problems/hindex"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "rainfall2",
+      "url": "https://open.kattis.com/problems/rainfall2"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "slalom2",
+      "url": "https://open.kattis.com/problems/slalom2"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "smallschedule",
+      "url": "https://open.kattis.com/problems/smallschedule"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "speed",
+      "url": "https://open.kattis.com/problems/speed"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "svada",
+      "url": "https://open.kattis.com/problems/svada"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "taxing",
+      "url": "https://open.kattis.com/problems/taxing"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "a1paper",
+      "url": "https://open.kattis.com/problems/a1paper"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "goingtoseed",
+      "url": "https://open.kattis.com/problems/goingtoseed"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "cantor",
+      "url": "https://open.kattis.com/problems/cantor"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "reconnaissance",
+      "url": "https://open.kattis.com/problems/reconnaissance"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "tricktreat",
+      "url": "https://open.kattis.com/problems/tricktreat"
+    },
+    {
+      "date": "2026-01-25",
+      "id": "zipline",
+      "url": "https://open.kattis.com/problems/zipline"
+    },
+    {
+      "date": "2026-01-31",
+      "id": "administrativeproblems",
+      "url": "https://open.kattis.com/problems/administrativeproblems"
+    },
+    {
+      "date": "2026-02-01",
+      "id": "babynames",
+      "url": "https://open.kattis.com/problems/babynames"
+    },
+    {
+      "date": "2026-02-02",
+      "id": "continuousmedian",
+      "url": "https://open.kattis.com/problems/continuousmedian"
+    },
+    {
+      "date": "2026-02-03",
+      "id": "orphanbackups",
+      "url": "https://open.kattis.com/problems/orphanbackups"
+    },
+    {
+      "date": "2026-02-04",
+      "id": "kattissquest",
+      "url": "https://open.kattis.com/problems/kattissquest"
+    },
+    {
+      "date": "2026-02-05",
+      "id": "cookieselection",
+      "url": "https://open.kattis.com/problems/cookieselection"
+    },
+    {
+      "date": "2026-02-06",
+      "id": "cakeymccakeface",
+      "url": "https://open.kattis.com/problems/cakeymccakeface"
+    },
+    {
+      "date": "2026-02-07",
+      "id": "raceday",
+      "url": "https://open.kattis.com/problems/raceday"
+    },
+    {
+      "date": "2026-02-08",
+      "id": "srednji",
+      "url": "https://open.kattis.com/problems/srednji"
+    },
+    {
+      "date": "2026-02-09",
+      "id": "opensource",
+      "url": "https://open.kattis.com/problems/opensource"
+    }
+  ],
+  "daily_tasks": {
+    "2026-01-17": [
+      {
+        "id": "workout",
+        "url": "https://open.kattis.com/problems/workout",
+        "solved": true
+      },
+      {
+        "id": "interpreter",
+        "url": "https://open.kattis.com/problems/interpreter",
+        "solved": true
+      },
+      {
+        "id": "mali",
+        "url": "https://open.kattis.com/problems/mali",
+        "solved": true
+      },
+      {
+        "id": "sim",
+        "url": "https://open.kattis.com/problems/sim",
+        "solved": true
+      },
+      {
+        "id": "jugglingpatterns",
+        "url": "https://open.kattis.com/problems/jugglingpatterns",
+        "solved": true
+      },
+      {
+        "id": "alphabetspam",
+        "url": "https://open.kattis.com/problems/alphabetspam",
+        "solved": true
+      },
+      {
+        "id": "bungeejumping",
+        "url": "https://open.kattis.com/problems/bungeejumping",
+        "solved": true
+      },
+      {
+        "id": "lumbercraft",
+        "url": "https://open.kattis.com/problems/lumbercraft",
+        "solved": true
+      },
+      {
+        "id": "gamenight",
+        "url": "https://open.kattis.com/problems/gamenight",
+        "solved": true
+      },
+      {
+        "id": "ultraquicksort",
+        "url": "https://open.kattis.com/problems/ultraquicksort",
+        "solved": true
+      },
+      {
+        "id": "knigsoftheforest",
+        "url": "https://open.kattis.com/problems/knigsoftheforest",
+        "solved": false
+      },
+      {
+        "id": "floppy",
+        "url": "https://open.kattis.com/problems/floppy",
+        "solved": false
+      },
+      {
+        "id": "tenis",
+        "url": "https://open.kattis.com/problems/tenis",
+        "solved": false
+      },
+      {
+        "id": "sabor",
+        "url": "https://open.kattis.com/problems/sabor",
+        "solved": false
+      },
+      {
+        "id": "alehouse",
+        "url": "https://open.kattis.com/problems/alehouse",
+        "solved": false
+      },
+      {
+        "id": "cd",
+        "url": "https://open.kattis.com/problems/cd",
+        "solved": false
+      },
+      {
+        "id": "babelfish",
+        "url": "https://open.kattis.com/problems/babelfish",
+        "solved": false
+      },
+      {
+        "id": "bst",
+        "url": "https://open.kattis.com/problems/bst",
+        "solved": true
+      },
+      {
+        "id": "touchdown",
+        "url": "https://open.kattis.com/problems/touchdown",
+        "solved": false
+      }
+    ],
+    "2026-01-18": [
+      {
+        "id": "clinic",
+        "url": "https://open.kattis.com/problems/clinic",
+        "solved": false
+      },
+      {
+        "id": "greetingcard",
+        "url": "https://open.kattis.com/problems/greetingcard",
+        "solved": false
+      },
+      {
+        "id": "basicinterpreter",
+        "url": "https://open.kattis.com/problems/basicinterpreter",
+        "solved": false
+      },
+      {
+        "id": "caching",
+        "url": "https://open.kattis.com/problems/caching",
+        "solved": true
+      },
+      {
+        "id": "doctorkattis",
+        "url": "https://open.kattis.com/problems/doctorkattis",
+        "solved": false
+      },
+      {
+        "id": "janeeyre",
+        "url": "https://open.kattis.com/problems/janeeyre",
+        "solved": false
+      },
+      {
+        "id": "iforaneye",
+        "url": "https://open.kattis.com/problems/iforaneye",
+        "solved": false
+      },
+      {
+        "id": "administrativeproblems",
+        "url": "https://open.kattis.com/problems/administrativeproblems",
+        "solved": false
+      },
+      {
+        "id": "ministryofmagic",
+        "url": "https://open.kattis.com/problems/ministryofmagic",
+        "solved": true
+      },
+      {
+        "id": "babynames",
+        "url": "https://open.kattis.com/problems/babynames",
+        "solved": false
+      },
+      {
+        "id": "continuousmedian",
+        "url": "https://open.kattis.com/problems/continuousmedian",
+        "solved": false
+      },
+      {
+        "id": "magicalcows",
+        "url": "https://open.kattis.com/problems/magicalcows",
+        "solved": false
+      },
+      {
+        "id": "orphanbackups",
+        "url": "https://open.kattis.com/problems/orphanbackups",
+        "solved": false
+      },
+      {
+        "id": "kattissquest",
+        "url": "https://open.kattis.com/problems/kattissquest",
+        "solved": false
+      },
+      {
+        "id": "cookieselection",
+        "url": "https://open.kattis.com/problems/cookieselection",
+        "solved": false
+      },
+      {
+        "id": "snowflakes",
+        "url": "https://open.kattis.com/problems/snowflakes",
+        "solved": false
+      },
+      {
+        "id": "gcpc",
+        "url": "https://open.kattis.com/problems/gcpc",
+        "solved": true
+      }
+    ],
+    "2026-01-19": [
+      {
+        "id": "cakeymccakeface",
+        "url": "https://open.kattis.com/problems/cakeymccakeface",
+        "solved": false
+      },
+      {
+        "id": "abinitio",
+        "url": "https://open.kattis.com/problems/abinitio",
+        "solved": false
+      },
+      {
+        "id": "chopwood",
+        "url": "https://open.kattis.com/problems/chopwood",
+        "solved": false
+      },
+      {
+        "id": "traveltheskies",
+        "url": "https://open.kattis.com/problems/traveltheskies",
+        "solved": false
+      },
+      {
+        "id": "alphabetanimals",
+        "url": "https://open.kattis.com/problems/alphabetanimals",
+        "solved": false
+      },
+      {
+        "id": "railroad",
+        "url": "https://open.kattis.com/problems/railroad",
+        "solved": false
+      },
+      {
+        "id": "unionfind",
+        "url": "https://open.kattis.com/problems/unionfind",
+        "solved": false
+      },
+      {
+        "id": "control",
+        "url": "https://open.kattis.com/problems/control",
+        "solved": false
+      },
+      {
+        "id": "ladice",
+        "url": "https://open.kattis.com/problems/ladice",
+        "solved": false
+      },
+      {
+        "id": "chatter",
+        "url": "https://open.kattis.com/problems/chatter",
+        "solved": false
+      },
+      {
+        "id": "forests",
+        "url": "https://open.kattis.com/problems/forests",
+        "solved": false
+      },
+      {
+        "id": "more10",
+        "url": "https://open.kattis.com/problems/more10",
+        "solved": false
+      },
+      {
+        "id": "swaptosort",
+        "url": "https://open.kattis.com/problems/swaptosort",
+        "solved": false
+      },
+      {
+        "id": "virtualfriends",
+        "url": "https://open.kattis.com/problems/virtualfriends",
+        "solved": false
+      },
+      {
+        "id": "fenwick",
+        "url": "https://open.kattis.com/problems/fenwick",
+        "solved": false
+      },
+      {
+        "id": "justforsidekicks",
+        "url": "https://open.kattis.com/problems/justforsidekicks",
+        "solved": true
+      },
+      {
+        "id": "moviecollection",
+        "url": "https://open.kattis.com/problems/moviecollection",
+        "solved": false
+      },
+      {
+        "id": "supercomputer",
+        "url": "https://open.kattis.com/problems/supercomputer",
+        "solved": false
+      },
+      {
+        "id": "turbo",
+        "url": "https://open.kattis.com/problems/turbo",
+        "solved": false
+      },
+      {
+        "id": "worstweather",
+        "url": "https://open.kattis.com/problems/worstweather",
+        "solved": false
+      }
+    ],
+    "2026-01-20": [
+      {
+        "id": "bridgesandtunnels",
+        "url": "https://open.kattis.com/problems/bridgesandtunnels",
+        "solved": true
+      },
+      {
+        "id": "findmyfamily",
+        "url": "https://open.kattis.com/problems/findmyfamily",
+        "solved": true
+      },
+      {
+        "id": "convoy",
+        "url": "https://open.kattis.com/problems/convoy",
+        "solved": true
+      },
+      {
+        "id": "menuupdates",
+        "url": "https://open.kattis.com/problems/menuupdates",
+        "solved": true
+      },
+      {
+        "id": "malari",
+        "url": "https://open.kattis.com/problems/malari",
+        "solved": false
+      },
+      {
+        "id": "andvag",
+        "url": "https://open.kattis.com/problems/andvag",
+        "solved": false
+      },
+      {
+        "id": "contestadvancement",
+        "url": "https://open.kattis.com/problems/contestadvancement",
+        "solved": false
+      },
+      {
+        "id": "hringvegurinn",
+        "url": "https://open.kattis.com/problems/hringvegurinn",
+        "solved": false
+      },
+      {
+        "id": "golf",
+        "url": "https://open.kattis.com/problems/golf",
+        "solved": false
+      },
+      {
+        "id": "tonlistarlisti",
+        "url": "https://open.kattis.com/problems/tonlistarlisti",
+        "solved": false
+      },
+      {
+        "id": "supplyroutes",
+        "url": "https://open.kattis.com/problems/supplyroutes",
+        "solved": false
+      },
+      {
+        "id": "magicallights",
+        "url": "https://open.kattis.com/problems/magicallights",
+        "solved": false
+      },
+      {
+        "id": "taxtherich",
+        "url": "https://open.kattis.com/problems/taxtherich",
+        "solved": false
+      },
+      {
+        "id": "bloopergame",
+        "url": "https://open.kattis.com/problems/bloopergame",
+        "solved": false
+      },
+      {
+        "id": "barshelf",
+        "url": "https://open.kattis.com/problems/barshelf",
+        "solved": false
+      },
+      {
+        "id": "canofworms",
+        "url": "https://open.kattis.com/problems/canofworms",
+        "solved": false
+      },
+      {
+        "id": "review",
+        "url": "https://open.kattis.com/problems/review",
+        "solved": false
+      },
+      {
+        "id": "cuckoo",
+        "url": "https://open.kattis.com/problems/cuckoo",
+        "solved": false
+      }
+    ],
+    "2026-01-21": [
+      {
+        "id": "raceday",
+        "url": "https://open.kattis.com/problems/raceday",
+        "solved": false
+      },
+      {
+        "id": "vudu",
+        "url": "https://open.kattis.com/problems/vudu",
+        "solved": false
+      },
+      {
+        "id": "guilds",
+        "url": "https://open.kattis.com/problems/guilds",
+        "solved": false
+      },
+      {
+        "id": "bracketsequence",
+        "url": "https://open.kattis.com/problems/bracketsequence",
+        "solved": false
+      },
+      {
+        "id": "interviewqueue",
+        "url": "https://open.kattis.com/problems/interviewqueue",
+        "solved": false
+      },
+      {
+        "id": "juggler",
+        "url": "https://open.kattis.com/problems/juggler",
+        "solved": false
+      },
+      {
+        "id": "killingchaos",
+        "url": "https://open.kattis.com/problems/killingchaos",
+        "solved": false
+      },
+      {
+        "id": "studying",
+        "url": "https://open.kattis.com/problems/studying",
+        "solved": false
+      },
+      {
+        "id": "treeshopping",
+        "url": "https://open.kattis.com/problems/treeshopping",
+        "solved": false
+      },
+      {
+        "id": "crashingrobots",
+        "url": "https://open.kattis.com/problems/crashingrobots",
+        "solved": false
+      },
+      {
+        "id": "traffic",
+        "url": "https://open.kattis.com/problems/traffic",
+        "solved": false
+      },
+      {
+        "id": "downfall",
+        "url": "https://open.kattis.com/problems/downfall",
+        "solved": false
+      },
+      {
+        "id": "parallelanalysis",
+        "url": "https://open.kattis.com/problems/parallelanalysis",
+        "solved": false
+      },
+      {
+        "id": "znanstvenik",
+        "url": "https://open.kattis.com/problems/znanstvenik",
+        "solved": false
+      },
+      {
+        "id": "musiccollection",
+        "url": "https://open.kattis.com/problems/musiccollection",
+        "solved": false
+      },
+      {
+        "id": "sound",
+        "url": "https://open.kattis.com/problems/sound",
+        "solved": false
+      },
+      {
+        "id": "thebigmacquestion",
+        "url": "https://open.kattis.com/problems/thebigmacquestion",
+        "solved": false
+      },
+      {
+        "id": "entertainmentbox",
+        "url": "https://open.kattis.com/problems/entertainmentbox",
+        "solved": false
+      }
+    ],
+    "2026-01-22": [
+      {
+        "id": "kletva",
+        "url": "https://open.kattis.com/problems/kletva",
+        "solved": false
+      },
+      {
+        "id": "megainversions",
+        "url": "https://open.kattis.com/problems/megainversions",
+        "solved": false
+      },
+      {
+        "id": "setstack",
+        "url": "https://open.kattis.com/problems/setstack",
+        "solved": false
+      },
+      {
+        "id": "srednji",
+        "url": "https://open.kattis.com/problems/srednji",
+        "solved": false
+      },
+      {
+        "id": "conversationlog",
+        "url": "https://open.kattis.com/problems/conversationlog",
+        "solved": false
+      },
+      {
+        "id": "deduplicatingfiles",
+        "url": "https://open.kattis.com/problems/deduplicatingfiles",
+        "solved": false
+      },
+      {
+        "id": "musicyourway",
+        "url": "https://open.kattis.com/problems/musicyourway",
+        "solved": false
+      },
+      {
+        "id": "opensource",
+        "url": "https://open.kattis.com/problems/opensource",
+        "solved": false
+      },
+      {
+        "id": "chartingprogress",
+        "url": "https://open.kattis.com/problems/chartingprogress",
+        "solved": false
+      },
+      {
+        "id": "classy",
+        "url": "https://open.kattis.com/problems/classy",
+        "solved": false
+      },
+      {
+        "id": "evenup",
+        "url": "https://open.kattis.com/problems/evenup",
+        "solved": false
+      },
+      {
+        "id": "funhouse",
+        "url": "https://open.kattis.com/problems/funhouse",
+        "solved": false
+      },
+      {
+        "id": "metaprogramming",
+        "url": "https://open.kattis.com/problems/metaprogramming",
+        "solved": false
+      },
+      {
+        "id": "numbertree",
+        "url": "https://open.kattis.com/problems/numbertree",
+        "solved": false
+      },
+      {
+        "id": "wheresmyinternet",
+        "url": "https://open.kattis.com/problems/wheresmyinternet",
+        "solved": false
+      },
+      {
+        "id": "minspantree",
+        "url": "https://open.kattis.com/problems/minspantree",
+        "solved": false
+      },
+      {
+        "id": "islandhopping",
+        "url": "https://open.kattis.com/problems/islandhopping",
+        "solved": false
+      },
+      {
+        "id": "arcticnetwork",
+        "url": "https://open.kattis.com/problems/arcticnetwork",
+        "solved": false
+      },
+      {
+        "id": "froshweek",
+        "url": "https://open.kattis.com/problems/froshweek",
+        "solved": false
+      },
+      {
+        "id": "intervalcover",
+        "url": "https://open.kattis.com/problems/intervalcover",
+        "solved": false
+      },
+      {
+        "id": "pivot",
+        "url": "https://open.kattis.com/problems/pivot",
+        "solved": false
+      },
+      {
+        "id": "foolingaround",
+        "url": "https://open.kattis.com/problems/foolingaround",
+        "solved": false
+      },
+      {
+        "id": "chocolates",
+        "url": "https://open.kattis.com/problems/chocolates",
+        "solved": false
+      },
+      {
+        "id": "luckynumber",
+        "url": "https://open.kattis.com/problems/luckynumber",
+        "solved": false
+      },
+      {
+        "id": "antiarithmetic",
+        "url": "https://open.kattis.com/problems/antiarithmetic",
+        "solved": false
+      }
+    ],
+    "2026-01-23": [
+      {
+        "id": "bikegears",
+        "url": "https://open.kattis.com/problems/bikegears",
+        "solved": false
+      },
+      {
+        "id": "liga",
+        "url": "https://open.kattis.com/problems/liga",
+        "solved": false
+      },
+      {
+        "id": "reduction",
+        "url": "https://open.kattis.com/problems/reduction",
+        "solved": false
+      },
+      {
+        "id": "goblingardenguards",
+        "url": "https://open.kattis.com/problems/goblingardenguards",
+        "solved": false
+      },
+      {
+        "id": "medals",
+        "url": "https://open.kattis.com/problems/medals",
+        "solved": false
+      },
+      {
+        "id": "classpicture",
+        "url": "https://open.kattis.com/problems/classpicture",
+        "solved": false
+      },
+      {
+        "id": "victorythroughsynergy",
+        "url": "https://open.kattis.com/problems/victorythroughsynergy",
+        "solved": false
+      },
+      {
+        "id": "squaredeal",
+        "url": "https://open.kattis.com/problems/squaredeal",
+        "solved": false
+      },
+      {
+        "id": "zagrade",
+        "url": "https://open.kattis.com/problems/zagrade",
+        "solved": false
+      },
+      {
+        "id": "buildingboundaries",
+        "url": "https://open.kattis.com/problems/buildingboundaries",
+        "solved": false
+      },
+      {
+        "id": "dreamer",
+        "url": "https://open.kattis.com/problems/dreamer",
+        "solved": false
+      },
+      {
+        "id": "towering",
+        "url": "https://open.kattis.com/problems/towering",
+        "solved": false
+      },
+      {
+        "id": "islands",
+        "url": "https://open.kattis.com/problems/islands",
+        "solved": false
+      },
+      {
+        "id": "walls",
+        "url": "https://open.kattis.com/problems/walls",
+        "solved": false
+      },
+      {
+        "id": "gradecurving",
+        "url": "https://open.kattis.com/problems/gradecurving",
+        "solved": false
+      },
+      {
+        "id": "prinova",
+        "url": "https://open.kattis.com/problems/prinova",
+        "solved": false
+      },
+      {
+        "id": "growlinggears",
+        "url": "https://open.kattis.com/problems/growlinggears",
+        "solved": false
+      },
+      {
+        "id": "trollhunt",
+        "url": "https://open.kattis.com/problems/trollhunt",
+        "solved": false
+      },
+      {
+        "id": "falling",
+        "url": "https://open.kattis.com/problems/falling",
+        "solved": false
+      },
+      {
+        "id": "disgruntledjudge",
+        "url": "https://open.kattis.com/problems/disgruntledjudge",
+        "solved": false
+      },
+      {
+        "id": "houselawn",
+        "url": "https://open.kattis.com/problems/houselawn",
+        "solved": false
+      }
+    ],
+    "2026-01-24": [
+      {
+        "id": "lipschitzconstant",
+        "url": "https://open.kattis.com/problems/lipschitzconstant",
+        "solved": false
+      },
+      {
+        "id": "milestones",
+        "url": "https://open.kattis.com/problems/milestones",
+        "solved": false
+      },
+      {
+        "id": "repeatingdecimal",
+        "url": "https://open.kattis.com/problems/repeatingdecimal",
+        "solved": false
+      },
+      {
+        "id": "robotopia",
+        "url": "https://open.kattis.com/problems/robotopia",
+        "solved": false
+      },
+      {
+        "id": "stopcounting",
+        "url": "https://open.kattis.com/problems/stopcounting",
+        "solved": false
+      },
+      {
+        "id": "trick",
+        "url": "https://open.kattis.com/problems/trick",
+        "solved": false
+      },
+      {
+        "id": "musicalchairs",
+        "url": "https://open.kattis.com/problems/musicalchairs",
+        "solved": false
+      },
+      {
+        "id": "toys",
+        "url": "https://open.kattis.com/problems/toys",
+        "solved": false
+      },
+      {
+        "id": "goodmorning",
+        "url": "https://open.kattis.com/problems/goodmorning",
+        "solved": false
+      },
+      {
+        "id": "paintings",
+        "url": "https://open.kattis.com/problems/paintings",
+        "solved": false
+      },
+      {
+        "id": "draughts",
+        "url": "https://open.kattis.com/problems/draughts",
+        "solved": false
+      },
+      {
+        "id": "dobra",
+        "url": "https://open.kattis.com/problems/dobra",
+        "solved": false
+      },
+      {
+        "id": "fruitbaskets",
+        "url": "https://open.kattis.com/problems/fruitbaskets",
+        "solved": false
+      },
+      {
+        "id": "pagelayout",
+        "url": "https://open.kattis.com/problems/pagelayout",
+        "solved": false
+      },
+      {
+        "id": "carvet",
+        "url": "https://open.kattis.com/problems/carvet",
+        "solved": false
+      },
+      {
+        "id": "primes",
+        "url": "https://open.kattis.com/problems/primes",
+        "solved": false
+      },
+      {
+        "id": "solitaire",
+        "url": "https://open.kattis.com/problems/solitaire",
+        "solved": false
+      },
+      {
+        "id": "firefly",
+        "url": "https://open.kattis.com/problems/firefly",
+        "solved": false
+      },
+      {
+        "id": "outofsorts",
+        "url": "https://open.kattis.com/problems/outofsorts",
+        "solved": false
+      },
+      {
+        "id": "roompainting",
+        "url": "https://open.kattis.com/problems/roompainting",
+        "solved": false
+      },
+      {
+        "id": "synchronizinglists",
+        "url": "https://open.kattis.com/problems/synchronizinglists",
+        "solved": false
+      },
+      {
+        "id": "carefulascent",
+        "url": "https://open.kattis.com/problems/carefulascent",
+        "solved": false
+      },
+      {
+        "id": "freeweights",
+        "url": "https://open.kattis.com/problems/freeweights",
+        "solved": false
+      }
+    ],
+    "2026-01-25": [
+      {
+        "id": "monk",
+        "url": "https://open.kattis.com/problems/monk",
+        "solved": false
+      },
+      {
+        "id": "suspensionbridges",
+        "url": "https://open.kattis.com/problems/suspensionbridges",
+        "solved": false
+      },
+      {
+        "id": "expeditiouscubing",
+        "url": "https://open.kattis.com/problems/expeditiouscubing",
+        "solved": false
+      },
+      {
+        "id": "financialplanning",
+        "url": "https://open.kattis.com/problems/financialplanning",
+        "solved": false
+      },
+      {
+        "id": "hindex",
+        "url": "https://open.kattis.com/problems/hindex",
+        "solved": false
+      },
+      {
+        "id": "rainfall2",
+        "url": "https://open.kattis.com/problems/rainfall2",
+        "solved": false
+      },
+      {
+        "id": "slalom2",
+        "url": "https://open.kattis.com/problems/slalom2",
+        "solved": false
+      },
+      {
+        "id": "smallschedule",
+        "url": "https://open.kattis.com/problems/smallschedule",
+        "solved": false
+      },
+      {
+        "id": "speed",
+        "url": "https://open.kattis.com/problems/speed",
+        "solved": false
+      },
+      {
+        "id": "svada",
+        "url": "https://open.kattis.com/problems/svada",
+        "solved": false
+      },
+      {
+        "id": "taxing",
+        "url": "https://open.kattis.com/problems/taxing",
+        "solved": false
+      },
+      {
+        "id": "a1paper",
+        "url": "https://open.kattis.com/problems/a1paper",
+        "solved": false
+      },
+      {
+        "id": "goingtoseed",
+        "url": "https://open.kattis.com/problems/goingtoseed",
+        "solved": false
+      },
+      {
+        "id": "cantor",
+        "url": "https://open.kattis.com/problems/cantor",
+        "solved": false
+      },
+      {
+        "id": "reconnaissance",
+        "url": "https://open.kattis.com/problems/reconnaissance",
+        "solved": false
+      },
+      {
+        "id": "tricktreat",
+        "url": "https://open.kattis.com/problems/tricktreat",
+        "solved": false
+      },
+      {
+        "id": "zipline",
+        "url": "https://open.kattis.com/problems/zipline",
+        "solved": false
+      }
+    ],
+    "2026-01-31": [
+      {
+        "id": "administrativeproblems",
+        "url": "https://open.kattis.com/problems/administrativeproblems",
+        "solved": false
+      }
+    ],
+    "2026-02-01": [
+      {
+        "id": "babynames",
+        "url": "https://open.kattis.com/problems/babynames",
+        "solved": false
+      }
+    ],
+    "2026-02-02": [
+      {
+        "id": "continuousmedian",
+        "url": "https://open.kattis.com/problems/continuousmedian",
+        "solved": false
+      }
+    ],
+    "2026-02-03": [
+      {
+        "id": "orphanbackups",
+        "url": "https://open.kattis.com/problems/orphanbackups",
+        "solved": false
+      }
+    ],
+    "2026-02-04": [
+      {
+        "id": "kattissquest",
+        "url": "https://open.kattis.com/problems/kattissquest",
+        "solved": false
+      }
+    ],
+    "2026-02-05": [
+      {
+        "id": "cookieselection",
+        "url": "https://open.kattis.com/problems/cookieselection",
+        "solved": false
+      }
+    ],
+    "2026-02-06": [
+      {
+        "id": "cakeymccakeface",
+        "url": "https://open.kattis.com/problems/cakeymccakeface",
+        "solved": false
+      }
+    ],
+    "2026-02-07": [
+      {
+        "id": "raceday",
+        "url": "https://open.kattis.com/problems/raceday",
+        "solved": false
+      }
+    ],
+    "2026-02-08": [
+      {
+        "id": "srednji",
+        "url": "https://open.kattis.com/problems/srednji",
+        "solved": false
+      }
+    ],
+    "2026-02-09": [
+      {
+        "id": "opensource",
+        "url": "https://open.kattis.com/problems/opensource",
+        "solved": false
+      }
+    ]
+  },
   "target_score": 5000,
   "target_date": "2025-05-07"
 }

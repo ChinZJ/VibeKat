@@ -755,19 +755,16 @@
             const ctx = document.getElementById('score-history-chart').getContext('2d');
             
             new Chart(ctx, {
-                type: 'line',
+                type: 'bar',
                 data: {
                     labels: dates.map(d => new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })),
                     datasets: [{
                         label: 'Total Score',
                         data: scores,
-                        borderColor: '#58a6ff',
-                        backgroundColor: 'rgba(88, 166, 255, 0.1)',
-                        borderWidth: 2,
-                        fill: true,
-                        tension: 0.4,
-                        pointRadius: 4,
-                        pointHoverRadius: 6
+                        backgroundColor: '#58a6ff',
+                        borderColor: '#388bfd',
+                        borderWidth: 1,
+                        borderRadius: 4
                     }]
                 },
                 options: {
@@ -775,7 +772,7 @@
                     maintainAspectRatio: false,
                     scales: {
                         y: { 
-                            beginAtZero: false,
+                            beginAtZero: true,
                             ticks: { color: '#8b949e' }, 
                             grid: { color: '#30363d' }
                         },
