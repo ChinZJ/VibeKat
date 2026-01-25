@@ -476,6 +476,59 @@ def track_solution_dates(solutions_dir: str, tracking_file: str = 'solution_date
 # Statistics
 # -----------------------------------------------------------------------------
 
+def track_score_over_time(total_score: float, tracking_file: str = 'scores.xlsx') -> dict:
+    """
+    Track total score over time in an Excel file.
+    Creates the file if it doesn't exist, adds today's score.
+    Returns a dict mapping date_string -> score for plotting.
+    """
+    from openpyxl import load_workbook, Workbook
+    from datetime import datetime
+    
+    today = datetime.now().strftime('%Y-%m-%d')
+    
+    # Load existing tracking file or create new one
+    if os.path.exists(tracking_file):
+        wb = load_workbook(tracking_file)
+        ws = wb.active
+    else:
+        wb = Workbook()
+        ws = wb.active
+        ws.title = "Score History"
+        ws['A1'] = 'Date'
+        ws['B1'] = 'Score'
+        
+        # Add initial data point for 2026-01-24 if creating new file
+        ws.append(['2026-01-24', 596.4])
+        print(f"  Created new score tracking file with baseline: 2026-01-24 -> 596.4")
+    
+    # Build dict of existing entries
+    score_history = {}
+    row_to_update = None
+    
+    for idx, row in enumerate(ws.iter_rows(min_row=2, values_only=False), start=2):
+        if row[0].value:
+            date_str = row[0].value
+            if isinstance(date_str, datetime):
+                date_str = date_str.strftime('%Y-%m-%d')
+            score_history[date_str] = row[1].value
+            
+            # Check if today's row exists
+            if date_str == today:
+                row_to_update = idx
+    
+    # Update or add today's score
+    if row_to_update:
+        ws.cell(row=row_to_update, column=2, value=total_score)
+        print(f"  Updated score for {today}: {total_score}")
+    else:
+        ws.append([today, total_score])
+        score_history[today] = total_score
+        print(f"  Added new score entry for {today}: {total_score}")
+    
+    wb.save(tracking_file)
+    return score_history
+
 def categorize_difficulty(difficulty: float) -> str:
     """Map difficulty score to a category."""
     if difficulty < 2.8:
@@ -490,7 +543,8 @@ def generate_stats(
     solved_problems: list[dict],
     actual_total_score: float,
     local_solutions: set[str],
-    solution_dates: dict,  # Add this parameter
+    solution_dates: dict,
+    score_history: dict, 
     excel_data: Optional[dict] = None
 ) -> dict:
     """
@@ -526,7 +580,8 @@ def generate_stats(
         'missing_solutions': missing_solutions,
         'extra_solutions': extra_solutions,
         'difficulty_breakdown': dict(difficulty_buckets),
-        'daily_activity': dict(daily_activity),  # Add this
+        'daily_activity': dict(daily_activity),
+        'score_history': dict(score_history),  # Add this line
         'todos': excel_data.get('todos', []),
         'daily_tasks': excel_data.get('daily_tasks', {}),
         'target_score': 5000,
@@ -573,6 +628,10 @@ def main():
     print(f"\nTracking solution dates...")
     solution_dates = track_solution_dates(args.solutions_dir)
     print(f"  Tracking {len(solution_dates)} solutions with dates")
+
+    print(f"\nTracking score over time...")
+    score_history = track_score_over_time(actual_score)
+    print(f"  Score history contains {len(score_history)} data points")
     
     # Parse Excel if provided
     excel_data = {}
@@ -583,8 +642,16 @@ def main():
     
     # Generate stats
     # Generate stats
-    stats = generate_stats(args.username, solved_problems, actual_score, local_solutions, solution_dates, excel_data)
-
+    # Generate stats
+    stats = generate_stats(
+        args.username, 
+        solved_problems, 
+        actual_score, 
+        local_solutions, 
+        solution_dates, 
+        score_history, 
+        excel_data
+    )
     # Print missing solutions if any
     if stats['missing_solutions']:
         print(f"\n=== Missing Solutions (files without local record) ===")

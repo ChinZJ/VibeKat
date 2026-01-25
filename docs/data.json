@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-01-24T16:56:57.738881Z",
+  "generated_at": "2026-01-25T13:50:54.866886Z",
   "username": "chin-zhen-jie",
-  "total_score": 596.4,
-  "calculated_score": 595.4,
-  "problems_solved": 207,
+  "total_score": 650.5,
+  "calculated_score": 649.5,
+  "problems_solved": 219,
   "problems": [
     {
       "id": "includescoring",
       "name": "#include<scoring>",
-      "difficulty": 5.3,
+      "difficulty": 5.2,
       "url": "https://open.kattis.com/problems/includescoring"
     },
     {
@@ -42,9 +42,15 @@
       "url": "https://open.kattis.com/problems/addemup"
     },
     {
+      "id": "administrativeproblems",
+      "name": "Administrative Difficulties",
+      "difficulty": 6.1,
+      "url": "https://open.kattis.com/problems/administrativeproblems"
+    },
+    {
       "id": "dream",
       "name": "All Just A Dream",
-      "difficulty": 5.3,
+      "difficulty": 5.2,
       "url": "https://open.kattis.com/problems/dream"
     },
     {
@@ -120,6 +126,12 @@
       "url": "https://open.kattis.com/problems/averagespeed"
     },
     {
+      "id": "babynames",
+      "name": "Baby Names",
+      "difficulty": 5.5,
+      "url": "https://open.kattis.com/problems/babynames"
+    },
+    {
       "id": "basicprogramming1",
       "name": "Basic Programming 1",
       "difficulty": 4.1,
@@ -154,6 +166,12 @@
       "name": "Best Relay Team",
       "difficulty": 1.6,
       "url": "https://open.kattis.com/problems/bestrelayteam"
+    },
+    {
+      "id": "bst",
+      "name": "Binary search tree",
+      "difficulty": 4.8,
+      "url": "https://open.kattis.com/problems/bst"
     },
     {
       "id": "birthdayboy",
@@ -226,6 +244,12 @@
       "name": "Bungee Jumping",
       "difficulty": 4.6,
       "url": "https://open.kattis.com/problems/bungeejumping"
+    },
+    {
+      "id": "cakeymccakeface",
+      "name": "Cakey McCakeFace",
+      "difficulty": 4.1,
+      "url": "https://open.kattis.com/problems/cakeymccakeface"
     },
     {
       "id": "calories",
@@ -312,10 +336,22 @@
       "url": "https://open.kattis.com/problems/contingencyplanning"
     },
     {
+      "id": "continuousmedian",
+      "name": "Continuous Median",
+      "difficulty": 2.8,
+      "url": "https://open.kattis.com/problems/continuousmedian"
+    },
+    {
       "id": "convoy",
       "name": "Convoy",
       "difficulty": 4.2,
       "url": "https://open.kattis.com/problems/convoy"
+    },
+    {
+      "id": "cookieselection",
+      "name": "Cookie Selection",
+      "difficulty": 4.8,
+      "url": "https://open.kattis.com/problems/cookieselection"
     },
     {
       "id": "cowcrane",
@@ -370,6 +406,12 @@
       "name": "Divide by 100...",
       "difficulty": 3.4,
       "url": "https://open.kattis.com/problems/divideby100"
+    },
+    {
+      "id": "doctorkattis",
+      "name": "Doctor Kattis",
+      "difficulty": 4.6,
+      "url": "https://open.kattis.com/problems/doctorkattis"
     },
     {
       "id": "dominos",
@@ -452,7 +494,7 @@
     {
       "id": "foosball",
       "name": "Foosball Dynasty",
-      "difficulty": 5.7,
+      "difficulty": 5.6,
       "url": "https://open.kattis.com/problems/foosball"
     },
     {
@@ -482,7 +524,7 @@
     {
       "id": "gamerank",
       "name": "Game Rank",
-      "difficulty": 4.0,
+      "difficulty": 4.1,
       "url": "https://open.kattis.com/problems/gamerank"
     },
     {
@@ -500,7 +542,7 @@
     {
       "id": "screen",
       "name": "Hacking the Screen",
-      "difficulty": 3.5,
+      "difficulty": 3.6,
       "url": "https://open.kattis.com/problems/screen"
     },
     {
@@ -580,6 +622,12 @@
       "name": "Interpreter",
       "difficulty": 3.3,
       "url": "https://open.kattis.com/problems/interpreter"
+    },
+    {
+      "id": "caching",
+      "name": "Introspective Caching",
+      "difficulty": 5.7,
+      "url": "https://open.kattis.com/problems/caching"
     },
     {
       "id": "inverteddeck",
@@ -770,7 +818,7 @@
     {
       "id": "natrij",
       "name": "Natrij",
-      "difficulty": 2.8,
+      "difficulty": 2.7,
       "url": "https://open.kattis.com/problems/natrij"
     },
     {
@@ -804,15 +852,27 @@
       "url": "https://open.kattis.com/problems/onechicken"
     },
     {
+      "id": "opensource",
+      "name": "Open Source",
+      "difficulty": 3.3,
+      "url": "https://open.kattis.com/problems/opensource"
+    },
+    {
       "id": "ordinals",
       "name": "Ordinals",
       "difficulty": 1.9,
       "url": "https://open.kattis.com/problems/ordinals"
     },
     {
+      "id": "orphanbackups",
+      "name": "Orphan Backups",
+      "difficulty": 5.9,
+      "url": "https://open.kattis.com/problems/orphanbackups"
+    },
+    {
       "id": "pachydermpeanutpacking",
       "name": "Pachyderm Peanut Packing",
-      "difficulty": 2.7,
+      "difficulty": 2.6,
       "url": "https://open.kattis.com/problems/pachydermpeanutpacking"
     },
     {
@@ -924,9 +984,15 @@
       "url": "https://open.kattis.com/problems/r2"
     },
     {
+      "id": "raceday",
+      "name": "Race Day",
+      "difficulty": 3.6,
+      "url": "https://open.kattis.com/problems/raceday"
+    },
+    {
       "id": "reconstructingtapeart",
       "name": "Reconstructing Tape Art",
-      "difficulty": 4.3,
+      "difficulty": 4.4,
       "url": "https://open.kattis.com/problems/reconstructingtapeart"
     },
     {
@@ -1074,6 +1140,12 @@
       "url": "https://open.kattis.com/problems/sortofsorting"
     },
     {
+      "id": "srednji",
+      "name": "Srednji",
+      "difficulty": 3.2,
+      "url": "https://open.kattis.com/problems/srednji"
+    },
+    {
       "id": "timeloop",
       "name": "Stuck In A Time Loop",
       "difficulty": 1.2,
@@ -1172,7 +1244,7 @@
     {
       "id": "turtlemaster",
       "name": "Turtle Master",
-      "difficulty": 2.9,
+      "difficulty": 2.8,
       "url": "https://open.kattis.com/problems/turtlemaster"
     },
     {
@@ -1253,7 +1325,6 @@
     "coconut",
     "conformity",
     "detaileddifferences",
-    "kattissquest",
     "lastfactorialdigit",
     "lostmap",
     "millionairemadness",
@@ -1267,29 +1338,34 @@
   ],
   "extra_solutions": [],
   "difficulty_breakdown": {
-    "Medium (2.8-5.5)": 80,
-    "Easy (<2.8)": 117,
-    "Hard (\u22655.6)": 10
+    "Medium (2.8-5.5)": 88,
+    "Easy (<2.8)": 118,
+    "Hard (\u22655.6)": 13
   },
   "daily_activity": {
     "2025-12-07": 65,
-    "2025-12-10": 21,
-    "2026-01-18": 10,
-    "2026-01-20": 22,
     "2025-12-08": 23,
     "2025-12-09": 2,
-    "2025-12-14": 9,
-    "2025-12-12": 5,
-    "2026-01-24": 8,
-    "2026-01-11": 7,
-    "2025-12-31": 3,
-    "2025-12-15": 5,
-    "2026-01-13": 5,
+    "2025-12-10": 21,
     "2025-12-11": 3,
-    "2026-01-19": 1,
-    "2025-12-20": 1,
+    "2025-12-12": 5,
+    "2025-12-14": 9,
+    "2025-12-15": 5,
     "2025-12-16": 1,
-    "2025-12-17": 1
+    "2025-12-17": 1,
+    "2025-12-20": 1,
+    "2025-12-31": 3,
+    "2026-01-11": 7,
+    "2026-01-13": 5,
+    "2026-01-18": 10,
+    "2026-01-19": 1,
+    "2026-01-20": 22,
+    "2026-01-24": 8,
+    "2026-01-25": 13
+  },
+  "score_history": {
+    "2026-01-24": 596.4,
+    "2026-01-25": 636.3
   },
   "todos": [
     {
@@ -1329,11 +1405,6 @@
     },
     {
       "date": "2026-01-17",
-      "id": "bst",
-      "url": "https://open.kattis.com/problems/bst"
-    },
-    {
-      "date": "2026-01-17",
       "id": "touchdown",
       "url": "https://open.kattis.com/problems/touchdown"
     },
@@ -1354,11 +1425,6 @@
     },
     {
       "date": "2026-01-18",
-      "id": "caching",
-      "url": "https://open.kattis.com/problems/caching"
-    },
-    {
-      "date": "2026-01-18",
       "id": "doctorkattis",
       "url": "https://open.kattis.com/problems/doctorkattis"
     },
@@ -1374,48 +1440,13 @@
     },
     {
       "date": "2026-01-18",
-      "id": "administrativeproblems",
-      "url": "https://open.kattis.com/problems/administrativeproblems"
-    },
-    {
-      "date": "2026-01-18",
-      "id": "babynames",
-      "url": "https://open.kattis.com/problems/babynames"
-    },
-    {
-      "date": "2026-01-18",
-      "id": "continuousmedian",
-      "url": "https://open.kattis.com/problems/continuousmedian"
-    },
-    {
-      "date": "2026-01-18",
       "id": "magicalcows",
       "url": "https://open.kattis.com/problems/magicalcows"
     },
     {
       "date": "2026-01-18",
-      "id": "orphanbackups",
-      "url": "https://open.kattis.com/problems/orphanbackups"
-    },
-    {
-      "date": "2026-01-18",
-      "id": "kattissquest",
-      "url": "https://open.kattis.com/problems/kattissquest"
-    },
-    {
-      "date": "2026-01-18",
-      "id": "cookieselection",
-      "url": "https://open.kattis.com/problems/cookieselection"
-    },
-    {
-      "date": "2026-01-18",
       "id": "snowflakes",
       "url": "https://open.kattis.com/problems/snowflakes"
-    },
-    {
-      "date": "2026-01-19",
-      "id": "cakeymccakeface",
-      "url": "https://open.kattis.com/problems/cakeymccakeface"
     },
     {
       "date": "2026-01-19",
@@ -1579,11 +1610,6 @@
     },
     {
       "date": "2026-01-21",
-      "id": "raceday",
-      "url": "https://open.kattis.com/problems/raceday"
-    },
-    {
-      "date": "2026-01-21",
       "id": "vudu",
       "url": "https://open.kattis.com/problems/vudu"
     },
@@ -1684,11 +1710,6 @@
     },
     {
       "date": "2026-01-22",
-      "id": "srednji",
-      "url": "https://open.kattis.com/problems/srednji"
-    },
-    {
-      "date": "2026-01-22",
       "id": "conversationlog",
       "url": "https://open.kattis.com/problems/conversationlog"
     },
@@ -1701,11 +1722,6 @@
       "date": "2026-01-22",
       "id": "musicyourway",
       "url": "https://open.kattis.com/problems/musicyourway"
-    },
-    {
-      "date": "2026-01-22",
-      "id": "opensource",
-      "url": "https://open.kattis.com/problems/opensource"
     },
     {
       "date": "2026-01-22",
@@ -2096,71 +2112,6 @@
       "date": "2026-01-25",
       "id": "zipline",
       "url": "https://open.kattis.com/problems/zipline"
-    },
-    {
-      "date": "2026-01-31",
-      "id": "bst",
-      "url": "https://open.kattis.com/problems/bst"
-    },
-    {
-      "date": "2026-02-02",
-      "id": "caching",
-      "url": "https://open.kattis.com/problems/caching"
-    },
-    {
-      "date": "2026-02-04",
-      "id": "orphanbackups",
-      "url": "https://open.kattis.com/problems/orphanbackups"
-    },
-    {
-      "date": "2026-02-05",
-      "id": "raceday",
-      "url": "https://open.kattis.com/problems/raceday"
-    },
-    {
-      "date": "2026-02-06",
-      "id": "doctorkattis",
-      "url": "https://open.kattis.com/problems/doctorkattis"
-    },
-    {
-      "date": "2026-02-07",
-      "id": "administrativeproblems",
-      "url": "https://open.kattis.com/problems/administrativeproblems"
-    },
-    {
-      "date": "2026-02-08",
-      "id": "kattissquest",
-      "url": "https://open.kattis.com/problems/kattissquest"
-    },
-    {
-      "date": "2026-02-09",
-      "id": "srednji",
-      "url": "https://open.kattis.com/problems/srednji"
-    },
-    {
-      "date": "2026-02-10",
-      "id": "cakeymccakeface",
-      "url": "https://open.kattis.com/problems/cakeymccakeface"
-    },
-    {
-      "date": "2026-02-11",
-      "id": "opensource",
-      "url": "https://open.kattis.com/problems/opensource"
-    },
-    {
-      "date": "2026-02-13",
-      "id": "babynames",
-      "url": "https://open.kattis.com/problems/babynames"
-    },
-    {
-      "date": "2026-02-14",
-      "id": "continuousmedian",
-      "url": "https://open.kattis.com/problems/continuousmedian"
-    },
-    {
-      "date": "2026-02-15",
-      "id": "cookieselection",
-      "url": "https://open.kattis.com/problems/cookieselection"
     }
   ],
   "daily_tasks": {
@@ -2253,7 +2204,7 @@
       {
         "id": "bst",
         "url": "https://open.kattis.com/problems/bst",
-        "solved": false
+        "solved": true
       },
       {
         "id": "touchdown",
@@ -2280,7 +2231,7 @@
       {
         "id": "caching",
         "url": "https://open.kattis.com/problems/caching",
-        "solved": false
+        "solved": true
       },
       {
         "id": "doctorkattis",
@@ -2300,7 +2251,7 @@
       {
         "id": "administrativeproblems",
         "url": "https://open.kattis.com/problems/administrativeproblems",
-        "solved": false
+        "solved": true
       },
       {
         "id": "ministryofmagic",
@@ -2310,12 +2261,12 @@
       {
         "id": "babynames",
         "url": "https://open.kattis.com/problems/babynames",
-        "solved": false
+        "solved": true
       },
       {
         "id": "continuousmedian",
         "url": "https://open.kattis.com/problems/continuousmedian",
-        "solved": false
+        "solved": true
       },
       {
         "id": "magicalcows",
@@ -2325,17 +2276,17 @@
       {
         "id": "orphanbackups",
         "url": "https://open.kattis.com/problems/orphanbackups",
-        "solved": false
+        "solved": true
       },
       {
         "id": "kattissquest",
         "url": "https://open.kattis.com/problems/kattissquest",
-        "solved": false
+        "solved": true
       },
       {
         "id": "cookieselection",
         "url": "https://open.kattis.com/problems/cookieselection",
-        "solved": false
+        "solved": true
       },
       {
         "id": "snowflakes",
@@ -2352,7 +2303,7 @@
       {
         "id": "cakeymccakeface",
         "url": "https://open.kattis.com/problems/cakeymccakeface",
-        "solved": false
+        "solved": true
       },
       {
         "id": "abinitio",
@@ -2546,7 +2497,7 @@
       {
         "id": "raceday",
         "url": "https://open.kattis.com/problems/raceday",
-        "solved": false
+        "solved": true
       },
       {
         "id": "vudu",
@@ -2653,7 +2604,7 @@
       {
         "id": "srednji",
         "url": "https://open.kattis.com/problems/srednji",
-        "solved": false
+        "solved": true
       },
       {
         "id": "conversationlog",
@@ -2673,7 +2624,7 @@
       {
         "id": "opensource",
         "url": "https://open.kattis.com/problems/opensource",
-        "solved": false
+        "solved": true
       },
       {
         "id": "chartingprogress",
@@ -3069,97 +3020,6 @@
       {
         "id": "zipline",
         "url": "https://open.kattis.com/problems/zipline",
-        "solved": false
-      }
-    ],
-    "2026-01-31": [
-      {
-        "id": "bst",
-        "url": "https://open.kattis.com/problems/bst",
-        "solved": false
-      }
-    ],
-    "2026-02-02": [
-      {
-        "id": "caching",
-        "url": "https://open.kattis.com/problems/caching",
-        "solved": false
-      }
-    ],
-    "2026-02-04": [
-      {
-        "id": "orphanbackups",
-        "url": "https://open.kattis.com/problems/orphanbackups",
-        "solved": false
-      }
-    ],
-    "2026-02-05": [
-      {
-        "id": "raceday",
-        "url": "https://open.kattis.com/problems/raceday",
-        "solved": false
-      }
-    ],
-    "2026-02-06": [
-      {
-        "id": "doctorkattis",
-        "url": "https://open.kattis.com/problems/doctorkattis",
-        "solved": false
-      }
-    ],
-    "2026-02-07": [
-      {
-        "id": "administrativeproblems",
-        "url": "https://open.kattis.com/problems/administrativeproblems",
-        "solved": false
-      }
-    ],
-    "2026-02-08": [
-      {
-        "id": "kattissquest",
-        "url": "https://open.kattis.com/problems/kattissquest",
-        "solved": false
-      }
-    ],
-    "2026-02-09": [
-      {
-        "id": "srednji",
-        "url": "https://open.kattis.com/problems/srednji",
-        "solved": false
-      }
-    ],
-    "2026-02-10": [
-      {
-        "id": "cakeymccakeface",
-        "url": "https://open.kattis.com/problems/cakeymccakeface",
-        "solved": false
-      }
-    ],
-    "2026-02-11": [
-      {
-        "id": "opensource",
-        "url": "https://open.kattis.com/problems/opensource",
-        "solved": false
-      }
-    ],
-    "2026-02-13": [
-      {
-        "id": "babynames",
-        "url": "https://open.kattis.com/problems/babynames",
-        "solved": false
-      }
-    ],
-    "2026-02-14": [
-      {
-        "id": "continuousmedian",
-        "url": "https://open.kattis.com/problems/continuousmedian",
-        "solved": false
-      }
-    ],
-    "2026-02-15": [
-      {
-        "id": "cookieselection",
-        "url": "https://open.kattis.com/problems/cookieselection",
         "solved": false
       }
     ]

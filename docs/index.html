@@ -494,6 +494,11 @@
                 <canvas id="histogram-chart"></canvas>
             </div>
         </div>
+
+        <div class="chart-container" style="margin-bottom: 30px;">
+            <h3>📈 Score Progress Over Time</h3>
+            <canvas id="score-history-chart"></canvas>
+        </div>
         
         <div class="section">
             <h2>📝 Problems</h2>
@@ -603,6 +608,7 @@
             renderStats();
             renderProgress();
             renderCharts();
+            renderScoreHistory(); 
             renderHeatmap();
             renderTodoTable();
             renderCompletedTable();
@@ -731,6 +737,55 @@
                         x: { ticks: { color: '#8b949e' }, grid: { color: '#30363d' } }
                     },
                     plugins: { legend: { display: false } }
+                }
+            });
+        }
+
+        function renderScoreHistory() {
+            const scoreHistory = statsData.score_history || {};
+            
+            if (Object.keys(scoreHistory).length === 0) {
+                return;
+            }
+            
+            // Sort dates and prepare data
+            const dates = Object.keys(scoreHistory).sort();
+            const scores = dates.map(date => scoreHistory[date]);
+            
+            const ctx = document.getElementById('score-history-chart').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: dates.map(d => new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })),
+                    datasets: [{
+                        label: 'Total Score',
+                        data: scores,
+                        backgroundColor: '#58a6ff',
+                        borderColor: '#388bfd',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: { 
+                            beginAtZero: true,
+                            ticks: { color: '#8b949e' }, 
+                            grid: { color: '#30363d' }
+                        },
+                        x: { 
+                            ticks: { color: '#8b949e' }, 
+                            grid: { color: '#30363d' } 
+                        }
+                    },
+                    plugins: { 
+                        legend: { 
+                            labels: { color: '#c9d1d9' }
+                        }
+                    }
                 }
             });
         }
