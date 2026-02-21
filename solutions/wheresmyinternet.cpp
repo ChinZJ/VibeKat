@@ -2,7 +2,6 @@
 using namespace std;
 
 typedef long long ll;
-typedef unsigned long long ull;
 typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
@@ -88,14 +87,13 @@ ll lcm(ll a, ll b) {
     return (a / gcd(a, b) * b);
 }
 
-ll binpow(ll a, ll b, ll mod=1) {
-    ll res = 1;
-    a%=mod;
+ll pow(ll a, ll b) {
+    ll res = 1; 
     while (b > 0) {
         if (b & 1) {
-            res = (res * a)%mod;
+            res = res * a;
         }
-        a = (a * a) % mod;
+        a = a * a;
         b >>= 1;
     }
     return res;
@@ -113,70 +111,44 @@ ll binpow(ll a, ll b, ll mod=1) {
 // cout << left << setw(10) << 42 << "\n";   // "42        " (left-aligned)
 // cout << setfill('0') << setw(5) << 42 << "\n";  // "00042" (zero-padded)
 
-
-ll binomial(int n, int k) {
-    if (k > n || k < 0) return 0;
-    if (k==0 || k==n) return 1;
-
-    if (k > n-k) k=n-k;
-
-    ll res=1;
-    for (int i=0;i<k;i++) {
-        res=res*(n-i)/(i+1);
-    }
-    return res;
-}
-
-struct Edge {
-    int u,v,weight;
-};
+bitset<200001> con; 
 
 signed main() {
-    cin.tie(0)->sync_with_stdio(0);
+    cin.tie(0) -> sync_with_stdio(0);
+    
+    int n,m; cin >> n >> m;
+    vector<vector<int>> adj(n+1);
+    
 
-    int n,m,p; cin >> n >> m >> p;
-    int x,y;
-    vi nx(n),ny(n), visn(n,0), vism(m,0), visp(p,0);
-    FOR(i,0,n) {
-        cin >> nx[i] >> ny[i];
+    int u,v;
+    for (int i = 0; i < m; ++i ) {
+        cin >> u >> v;
+        adj[u].push_back(v);
+        adj[v].push_back(u);
     }
 
-    vector<tuple<double,int,int>> dist(n*m);
-    FOR(j,0,m) {
-        cin >> x >> y;
-        FOR(i,0,n) {
-            dist[(j*n)+i]={((x-nx[i])*(x-nx[i])) + ((y-ny[i]))*((y-ny[i])), i, j};
-        }
-    }
-    sort(ALL(dist));
-    int cnt=0; 
-    double ans=0;
-    FOR(i,0,n*m) {
-        auto [val,idn, idm]=dist[i];
-        if (visn[idn] || vism[idm]) continue;
+    queue<int> q; q.push(1);
+    while (!q.empty()) {
+        u = q.front(); q.pop();
+        if (con[u]) continue;
 
-        visn[idn]=1; vism[idm]=1; ans+=sqrt(val); cnt++;
-        if (cnt==n) break;
-    }
-
-    dist.clear(); dist.reserve(n*p);
-    visn.assign(n,0);
-    FOR(j,0,p) {
-        cin >> x >> y;
-        FOR(i,0,n) {
-            dist.pb({((x-nx[i])*(x-nx[i])) + ((y-ny[i])*((y-ny[i]))), i, j});
+        con.set(u);
+        for (int v : adj[u]) {
+            if (!con[v]) q.push(v);
         }
     }
 
-    cnt=0;
-    sort(ALL(dist));
-    FOR(i,0,n*p) {
-        auto [val,idn,idp]=dist[i];
-        if (visn[idn] || visp[idp]) continue;
+    con.set(0);
+    con = ~con;
 
-        visn[idn]=1; visp[idp]=1; ans+=sqrt(val); cnt++;
-        if (cnt==n) break;
+    if (con._Find_first() > n) {
+        cout << "Connected\n";
+        return 0;
     }
 
-    cout << fixed << setprecision(10) << ans << '\n';
+
+    for (int i = con._Find_first(); i <= n; i = con._Find_next(i)) {
+        cout << i << '\n';
+    }
+    
 }

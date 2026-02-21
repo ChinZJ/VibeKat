@@ -2,27 +2,18 @@
 using namespace std;
 
 typedef long long ll;
-typedef unsigned long long ull;
 typedef long double ld;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<ll> vll;
-typedef tuple<int, int, int> tiii;
 
 #define pb push_back
 #define fi first
 #define se second
 
-#define elif else if
-
-#define sz(x) (int)(x).size()
-
 #define FOR(i, a, b) for (int i = int(a); i < int(b); i++)
 #define REP(i, a, b) for (int i = int(a); i <= int(b); i++)
 #define REF(i, a, b) for (int i = int(a); i >= int(b); i--)
-
-#define ALL(x) (x).begin(), (x).end()
-#define RALL(x) (x).rbegin(), (x).rend()
 
 // Multiple by 2 use <<
 // Divide by 2 use >>
@@ -45,6 +36,7 @@ typedef tuple<int, int, int> tiii;
 // __builtin_popcountll(S): ll version
 // __builtin_ctz(S): counts number of trailing zeroes in S
 // __builtin_clz(S): counts number of leading zeroes in S 
+
 
 // 32bit ~ 2x10^9
 // 64bit ~ 9x10^18
@@ -88,95 +80,83 @@ ll lcm(ll a, ll b) {
     return (a / gcd(a, b) * b);
 }
 
-ll binpow(ll a, ll b, ll mod=1) {
-    ll res = 1;
-    a%=mod;
+ll pow(ll a, ll b) {
+    ll res = 1; 
     while (b > 0) {
         if (b & 1) {
-            res = (res * a)%mod;
+            res = res * a;
         }
-        a = (a * a) % mod;
+        a = a * a;
         b >>= 1;
     }
     return res;
 }
 
-// Read K values and ignore the rest
-// cin >> a >> b >> c;
-// cin.ignore(numeric_limits<streamsize>::max(), '\n');
-// Use cin.ignore() before getline()
 
 // cout << fixed << setprecision(8) << ... for decimal precision
 
 
-// cout << setw(10) << 42 << "\n";           // "        42" (right-aligned)
-// cout << left << setw(10) << 42 << "\n";   // "42        " (left-aligned)
-// cout << setfill('0') << setw(5) << 42 << "\n";  // "00042" (zero-padded)
-
-
-ll binomial(int n, int k) {
-    if (k > n || k < 0) return 0;
-    if (k==0 || k==n) return 1;
-
-    if (k > n-k) k=n-k;
-
-    ll res=1;
-    for (int i=0;i<k;i++) {
-        res=res*(n-i)/(i+1);
-    }
-    return res;
-}
-
-struct Edge {
-    int u,v,weight;
-};
-
 signed main() {
-    cin.tie(0)->sync_with_stdio(0);
-
-    int n,m,p; cin >> n >> m >> p;
-    int x,y;
-    vi nx(n),ny(n), visn(n,0), vism(m,0), visp(p,0);
-    FOR(i,0,n) {
-        cin >> nx[i] >> ny[i];
-    }
-
-    vector<tuple<double,int,int>> dist(n*m);
-    FOR(j,0,m) {
-        cin >> x >> y;
-        FOR(i,0,n) {
-            dist[(j*n)+i]={((x-nx[i])*(x-nx[i])) + ((y-ny[i]))*((y-ny[i])), i, j};
+    cin.tie(0) -> sync_with_stdio(0);
+    
+    int n,m,k; cin >> n >> m >> k;
+    cin.ignore();
+    string GOAL = "\"Jane Eyre\"";
+    unordered_map<string, int> pages;
+    pages[GOAL] = k;
+    string s;
+    priority_queue<string, vector<string>, greater<string>> pq;
+    pq.push(GOAL);
+    for (int i = 0; i < n; ++i) {
+        getline(cin, s);
+        int end = s.size() - 1;
+        for (end; end >= 0; end--) {
+            if (s[end] == ' ')
+                break;
         }
-    }
-    sort(ALL(dist));
-    int cnt=0; 
-    double ans=0;
-    FOR(i,0,n*m) {
-        auto [val,idn, idm]=dist[i];
-        if (visn[idn] || vism[idm]) continue;
-
-        visn[idn]=1; vism[idm]=1; ans+=sqrt(val); cnt++;
-        if (cnt==n) break;
-    }
-
-    dist.clear(); dist.reserve(n*p);
-    visn.assign(n,0);
-    FOR(j,0,p) {
-        cin >> x >> y;
-        FOR(i,0,n) {
-            dist.pb({((x-nx[i])*(x-nx[i])) + ((y-ny[i])*((y-ny[i]))), i, j});
+        k = stoi(s.substr(end+1));
+        s = s.substr(0,end);
+        // cout << "extracted " << s << ' ' << k << '\n';
+        if (pages.find(s) == pages.end()) {
+            pages[s] = k;
+            pq.push(s);
         }
     }
 
-    cnt=0;
-    sort(ALL(dist));
-    FOR(i,0,n*p) {
-        auto [val,idn,idp]=dist[i];
-        if (visn[idn] || visp[idp]) continue;
+    ll a;
+    vector<pair<ll, string>> friends(m);
+    for (int i = 0; i < m; ++i) {
+        cin >> a;
+        cin.ignore();
+        getline(cin, s);
+        int end = s.size() - 1;
+        for (end; end >= 0; end--) {
+            if (s[end] == ' ')
+                break;
+        }
+        k = stoi(s.substr(end+1));
+        s = s.substr(0,end);
+        // cout << "extracted " << s << ' ' << k << '\n';
 
-        visn[idn]=1; visp[idp]=1; ans+=sqrt(val); cnt++;
-        if (cnt==n) break;
+        if (pages.find(s) == pages.end()) {
+            pages[s] = k;
+        }
+        friends[i] = {a,s};
     }
+    sort(friends.begin(), friends.end());
 
-    cout << fixed << setprecision(10) << ans << '\n';
+    ll ans=0; int idx=0;
+    while (!pq.empty()) {
+        while (idx < m && friends[idx].first <=ans) {
+            pq.push(friends[idx].second);
+            idx++;
+        }
+        s = move(pq.top()); pq.pop();
+        // cout << "Popped " << s << "with pq size" << pq.size() << '\n';
+        if (s == GOAL) {
+            cout << ans + pages[GOAL] << '\n';
+            return 0;
+        }
+        ans += pages[s];
+    }
 }

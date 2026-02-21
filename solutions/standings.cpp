@@ -134,49 +134,20 @@ struct Edge {
 signed main() {
     cin.tie(0)->sync_with_stdio(0);
 
-    int n,m,p; cin >> n >> m >> p;
-    int x,y;
-    vi nx(n),ny(n), visn(n,0), vism(m,0), visp(p,0);
-    FOR(i,0,n) {
-        cin >> nx[i] >> ny[i];
-    }
-
-    vector<tuple<double,int,int>> dist(n*m);
-    FOR(j,0,m) {
-        cin >> x >> y;
-        FOR(i,0,n) {
-            dist[(j*n)+i]={((x-nx[i])*(x-nx[i])) + ((y-ny[i]))*((y-ny[i])), i, j};
+    int T; cin >> T; string s;
+    while (T--) {
+        int N; cin >> N;
+        vi a(N);
+        FOR(i,0,N) {
+            cin >> s >> a[i];
         }
-    }
-    sort(ALL(dist));
-    int cnt=0; 
-    double ans=0;
-    FOR(i,0,n*m) {
-        auto [val,idn, idm]=dist[i];
-        if (visn[idn] || vism[idm]) continue;
 
-        visn[idn]=1; vism[idm]=1; ans+=sqrt(val); cnt++;
-        if (cnt==n) break;
-    }
-
-    dist.clear(); dist.reserve(n*p);
-    visn.assign(n,0);
-    FOR(j,0,p) {
-        cin >> x >> y;
-        FOR(i,0,n) {
-            dist.pb({((x-nx[i])*(x-nx[i])) + ((y-ny[i])*((y-ny[i]))), i, j});
+        sort(ALL(a));
+        ll ans=0;
+        FOR(i,0,N) {
+            ans+=(abs(a[i]-(i+1)));
         }
+
+        cout << ans << '\n';
     }
-
-    cnt=0;
-    sort(ALL(dist));
-    FOR(i,0,n*p) {
-        auto [val,idn,idp]=dist[i];
-        if (visn[idn] || visp[idp]) continue;
-
-        visn[idn]=1; visp[idp]=1; ans+=sqrt(val); cnt++;
-        if (cnt==n) break;
-    }
-
-    cout << fixed << setprecision(10) << ans << '\n';
 }

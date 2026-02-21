@@ -127,56 +127,130 @@ ll binomial(int n, int k) {
     return res;
 }
 
-struct Edge {
-    int u,v,weight;
+template<typename T>
+struct Dinic {
+    struct Edge {
+        int to, rev; // destination vertex
+                     // index of reverse edge
+        T c, oc;     // current residual capacity
+                     // original capacity
+        T flow() { return max(oc - c, T(0)); }
+    };
+    
+    vector<int> lvl, ptr, q;
+    vector<vector<Edge>> adj;
+    
+    Dinic(int n) : lvl(n), ptr(n), q(n), adj(n) {}
+    
+    // Adds edge a - b with capacity c and b - a with capacity rcap
+    void addEdge(int a, int b, T c, T rcap = 0) {
+        adj[a].push_back({b, (int)adj[b].size(), c, c});
+        adj[b].push_back({a, (int)adj[a].size() - 1, rcap, rcap});
+    }
+    
+
+    T dfs(int v, int t, T f) {
+        if (v == t || !f) return f; // Either reach sink
+                                    // Or no flow
+        for (int& i = ptr[v]; i < (int)adj[v].size(); i++) {
+            Edge& e = adj[v][i];
+            if (lvl[e.to] == lvl[v] + 1) { // Only follow level graph
+                T p = dfs(e.to, t, min(f, e.c));
+                if (p) {
+                    e.c -= p; // Decrease forward edge
+                    adj[e.to][e.rev].c += p; // Increase backward edge
+                    return p;
+                }
+            }
+        }
+        return 0;
+    }
+    
+    T calc(int s, int t) {
+        T flow = 0;
+        q[0] = s;
+        for (int L = 0; L < 31; L++) { // Scaling optimization
+                                       // Consider edges with large capacity, then smaller edges to reduce number of augmenting paths required
+            do {
+                // BFS to build level graph
+                lvl.assign(adj.size(), 0); // Distance from source, 0 = unreachable
+                ptr.assign(adj.size(), 0); // Tracks which edges (in the form of indices to adj) to try
+                int qi = 0, qe = 1; // manual queue
+                lvl[s] = 1;
+                while (qi < qe && !lvl[t]) {
+                    int v = q[qi++];
+                    for (Edge& e : adj[v]) { // Note that for each iteration, edge is constantly being updated, previous paths will not be considered
+                        if (!lvl[e.to] && e.c >> (30 - L)) { // simple check will just be e.c > 0 instead of optimization
+                            q[qe++] = e.to;
+                            lvl[e.to] = lvl[v] + 1;
+                        }
+                    }
+                }
+                
+                // Without optimization will require additional line
+                // if (!lvl[t]) break;
+
+                // DFS to find blocking flow
+                while (T p = dfs(s, t, numeric_limits<T>::max())) {
+                    flow += p;
+                }
+            } while (lvl[t]); // lvl[t] is non zero if reachable from source
+        }
+        return flow;
+    }
+    
+    bool leftOfMinCut(int a) { return lvl[a] != 0; }
 };
 
 signed main() {
     cin.tie(0)->sync_with_stdio(0);
 
-    int n,m,p; cin >> n >> m >> p;
-    int x,y;
-    vi nx(n),ny(n), visn(n,0), vism(m,0), visp(p,0);
+    int n,k,h; cin >> n >> k >> h;
+    vector<vi> height(n,vi(n));
     FOR(i,0,n) {
-        cin >> nx[i] >> ny[i];
-    }
-
-    vector<tuple<double,int,int>> dist(n*m);
-    FOR(j,0,m) {
-        cin >> x >> y;
-        FOR(i,0,n) {
-            dist[(j*n)+i]={((x-nx[i])*(x-nx[i])) + ((y-ny[i]))*((y-ny[i])), i, j};
-        }
-    }
-    sort(ALL(dist));
-    int cnt=0; 
-    double ans=0;
-    FOR(i,0,n*m) {
-        auto [val,idn, idm]=dist[i];
-        if (visn[idn] || vism[idm]) continue;
-
-        visn[idn]=1; vism[idm]=1; ans+=sqrt(val); cnt++;
-        if (cnt==n) break;
-    }
-
-    dist.clear(); dist.reserve(n*p);
-    visn.assign(n,0);
-    FOR(j,0,p) {
-        cin >> x >> y;
-        FOR(i,0,n) {
-            dist.pb({((x-nx[i])*(x-nx[i])) + ((y-ny[i])*((y-ny[i]))), i, j});
+        FOR(j,0,n) {
+            cin >> height[i][j];
         }
     }
 
-    cnt=0;
-    sort(ALL(dist));
-    FOR(i,0,n*p) {
-        auto [val,idn,idp]=dist[i];
-        if (visn[idn] || visp[idp]) continue;
+    auto IN=[&](int t, int i, int j) { return 2*(t*n*n + i*n + j);};
+    auto OUT=[&](int t, int i, int j) { return 2*(t*n*n + i*n + j) + 1;};
 
-        visn[idn]=1; visp[idp]=1; ans+=sqrt(val); cnt++;
-        if (cnt==n) break;
+    int totN=2*n*n*(h+1);
+    int src=totN, snk=totN+1;
+    Dinic<ll> flow(totN+2);
+
+    int r,c;
+    FOR(i,0,k) {
+        cin >> r >> c;
+        flow.addEdge(src,IN(0,r,c), 1);
+        flow.addEdge(IN(0,r,c), OUT(0,r,c), 1);
     }
 
-    cout << fixed << setprecision(10) << ans << '\n';
+    int fh;
+    vector<pii> mv={{0,0},{0,1},{1,0},{-1,0},{0,-1}};
+
+    int nx,ny;
+    REP(hh,1,h) {
+        cin >> fh;
+        FOR(i,0,n) {
+            FOR(j,0,n) {
+                for (auto [xx,yy]:mv) {
+                    nx=i+xx; ny=j+yy;
+                    if (nx>=0 && nx<n && ny>=0 && ny<n) {
+                        flow.addEdge(OUT(hh-1,nx,ny), IN(hh,i,j),1);
+                    }
+                }
+
+                if (height[i][j]<=fh) continue;
+
+                flow.addEdge(IN(hh,i,j), OUT(hh,i,j), 1);
+
+                if (hh==h) flow.addEdge(OUT(hh,i,j), snk, 1);
+            }
+        }
+    }
+
+    cout << flow.calc(src,snk) << '\n';
+
 }
