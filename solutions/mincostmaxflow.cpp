@@ -360,28 +360,17 @@ signed main() {
     cin.tie(0) -> sync_with_stdio(0);
     
     /**
-     * TODO
-     * Bidirectional edges. Observe that it is ok to duplicate here 
-     *      because it is costly for cycles to form
+     * Conventional MCMF 
      */
 
-    int P,R,L; cin >> P >> R >> L;
-    int bank1=0, bank2=1;
-    int src=R+2,snk=src+1;
-    MCMF<ll> flow(snk+1);
-
-    flow.addEdge(src,bank1,P,0);
-    flow.addEdge(bank2,snk,P,0);
-
-    int E1,E2;
-    FOR(i,0,L) {
-        cin >> E1 >> E2;
-        E1+=2; E2+=2;
-        flow.addEdge(E1,E2,1,1);
-        flow.addEdge(E2,E1,1,1);
+    int n,m,s,t; cin >> n >> m >> s >> t;
+    int u,v; ll c,w;
+    MCMF<ll> flow(n);
+    FOR(i,0,m) {
+        cin >> u >> v >> c >> w;
+        flow.addEdge(u,v,c,w);
     }
-    auto [totf, totc] = flow.maxflow(src,snk);
-    if (totf!=P) cout << (P-totf) << " people left behind\n";
-    else cout << totc << '\n';
+    // No negative costs
+    auto [tf,tc] = flow.maxflow(s,t);
+    cout << tf << ' ' << tc << '\n';
 }
-

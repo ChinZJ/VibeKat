@@ -361,27 +361,56 @@ signed main() {
     
     /**
      * TODO
-     * Bidirectional edges. Observe that it is ok to duplicate here 
-     *      because it is costly for cycles to form
+     * Solveable by DP. Should be able to track both forward and return trips simultaneously
+     * 
+     * Negative edge weights requires settign of potential
      */
+    
+    int t; cin >> t; while(t--) {
+        int W,H; cin >> W >> H;
+        string s;
+        vector<vector<int>> grid(H, vector<int>(W,0));
+        FOR(i,0,H) {
+            cin >> s;
+            FOR(j,0,W) {
+                if (s[j]=='.') continue;
+                elif (s[j]=='*') grid[i][j]=1;
+                else grid[i][j]=-1;
+            }
+        }
 
-    int P,R,L; cin >> P >> R >> L;
-    int bank1=0, bank2=1;
-    int src=R+2,snk=src+1;
-    MCMF<ll> flow(snk+1);
+        int offset_idin = 0;
+        auto idin=[&](int i, int j) {return offset_idin + (i*W) + j;};
+        int offset_idout = offset_idin + (H*W);
+        auto idout=[&](int i, int j) {return offset_idout + idin(i,j);}; 
+        int src=offset_idout + (H*W);
+        MCMF<ll> flow(src + 1);
 
-    flow.addEdge(src,bank1,P,0);
-    flow.addEdge(bank2,snk,P,0);
+        flow.addEdge(src, idin(0,0), 2, 0);
 
-    int E1,E2;
-    FOR(i,0,L) {
-        cin >> E1 >> E2;
-        E1+=2; E2+=2;
-        flow.addEdge(E1,E2,1,1);
-        flow.addEdge(E2,E1,1,1);
+        FOR(i,0,H) {
+            FOR(j,0,W) {
+                if (grid[i][j]==-1) continue;
+
+                if (grid[i][j] == 1) {
+                    flow.addEdge(idin(i,j), idout(i,j), 1, -1);
+                    flow.addEdge(idin(i,j), idout(i,j), 1, 0);
+                } else {
+                    flow.addEdge(idin(i,j), idout(i,j), 2, 0);
+                }
+
+                if (i+1 < H && grid[i+1][j] != -1) {
+                    flow.addEdge(idout(i,j), idin(i+1, j), 2, 0);
+                }
+                if (j+1 < W && grid[i][j+1] != -1) {
+                    flow.addEdge(idout(i,j), idin(i, j+1), 2, 0);
+                }
+            }
+        }
+
+        flow.setpi(src);
+        auto [totf, totc] = flow.maxflow(src,idout(H-1,W-1));
+        cout << -totc << '\n';
     }
-    auto [totf, totc] = flow.maxflow(src,snk);
-    if (totf!=P) cout << (P-totf) << " people left behind\n";
-    else cout << totc << '\n';
 }
 

@@ -117,9 +117,9 @@ struct EdgeRef {
 };
 
 enum EdgeClass{ 
-    IN_ALL, 
-    IN_SOME, 
-    IN_NONE 
+    IN_ALL,  // only bridge between S and T
+    IN_SOME, // can appear in min cut, but alternatives exist
+    IN_NONE, // never needed (residual e.c > 0)
 };
 
 template<typename T>
@@ -267,6 +267,9 @@ struct Dinic {
                     CUT ANALYSIS AND BOTTLENECK DETECTION
 ================================================================================
  */
+    // reachS gives one valid min cut set (the smallest) from the source side
+    // reachT gives one valid min cut set (the smallest) from the sink side
+        // "middle vertices" are free to move between sides without changing the min cost
     vector<bool> reachS, reachT;
 
     // Called ONCE after calc() to build reachability sets
@@ -341,69 +344,48 @@ signed main() {
     cin.tie(0) -> sync_with_stdio(0);
     
     /**
-     * Bipartite matching
+     * 
      */
-    int m,n; cin >> m >> n;
-    Dinic<ll> flow(n+m+3);
-    int src=n+m+1, snk=n+m+2;
 
-    auto vleft = [&](int i) {return i;};
-    auto vright =[&](int i) {return m+i;}; // 1..n
-    auto revright=[&](int i) {return i-m;}; 
+    int n,m,p; cin >> n >> m >> p;
+    int offset_child=0;
+    auto cld=[&](int i) {return offset_child+i;};
+    int offset_toy=offset_child+n+2;
+    auto ty=[&](int i) {return offset_toy+i;};
+    int offset_tcoy=offset_toy+m+2;
+    auto tcoy=[&](int i) {return offset_tcoy+i;};
+    int src=offset_tcoy+p+2;
+    int snk=src+1;
+    Dinic<ll> flow(snk+1);
 
+    FOR(i,0,n) flow.addEdge(src,cld(i),1);
 
-    string s; int d,t;
-    unordered_map<string, int> name; unordered_map<int, string> revname; int uid=0;
-    vector<EdgeRef> edgerefs(n+m+3); // extra but ok
-
-    FOR(i,0,m) {
-        cin >> s >> d;
-        name[s] = uid; revname[uid]=s;
-        edgerefs[uid]=flow.addEdge(src,vleft(uid),1);
-        FOR(j,0,d) {
-            cin >> t;
-            flow.addEdge(vleft(uid), vright(t), 1);
-        }
-        ++uid;
-    }
-    REP(i,1,n) {
-        flow.addEdge(vright(i),snk,2);
-    }
-
-    ll lo=0, hi=n; bool ok=true;
-    while (lo<hi) {
-        ll mid=lo + (hi-lo)/2;
-        FOR(i,0,m) {
-            ok=flow.updateEdge(edgerefs[i],mid);
-        }
-        flow.resetFlow();
-        ll val=flow.calc(src,snk);
-        if (val == (2*n)) {
-            hi=mid;
-        } else lo=mid+1;
-    }
-
-    
-    FOR(i,0,m) {
-        ok=flow.updateEdge(edgerefs[i],lo);
-    }
-    flow.resetFlow();
-    flow.calc(src,snk);
-
-    cout << lo << '\n';
-    vector<vi> ans(n+1);
-    FOR(i,0,m) {
-        for (auto& e : flow.adj[vleft(i)]) {
-            if (e.flow() > 0 && e.oc > 0 && sz(ans[revright(e.to)]) < 2) 
-                ans[revright(e.to)].pb(i);
+    FOR(i,0,n) {
+        int k; cin >> k;
+        int d;
+        FOR(j,0,k) {
+            cin >> d;
+            flow.addEdge(cld(i),ty(d),1);
         }
     }
 
-    REP(i,1,n) {
-        cout << "Day " << i << ": ";
-        for (auto j : ans[i]) {
-            cout << revname[j] << ' ';
+    vector<bool> vis(m+1, false);
+    FOR(i,0,p) {
+        int l; cin >> l;
+        int jj;
+        FOR(j,0,l) {
+            cin >> jj;
+            flow.addEdge(ty(jj),tcoy(i),1);
+            vis[jj]=true;
         }
-        cout << '\n';
+        int r; cin >> r;
+        flow.addEdge(tcoy(i),snk,r);
+        
     }
+    REP(i,1,m) {
+        if (!vis[i]) {
+            flow.addEdge(ty(i),snk,1);
+        }
+    }
+    cout << flow.calc(src,snk) << '\n';
 }

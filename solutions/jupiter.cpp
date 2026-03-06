@@ -341,69 +341,65 @@ signed main() {
     cin.tie(0) -> sync_with_stdio(0);
     
     /**
-     * Bipartite matching
+     * TODO
+     * Learn vertex indexing tricks
+     * 
+     * Sensor as a vertex is redundant and you only require
+     *      Source
+     *      n sets of queues
+     *      n downlinks
+     *      Sink
+     * 
+     * All qouts should be connected to the next qins
+     * Source should be conencted to all relevant queues (proxy for sensor)
+     * All downlinks should be connected to Sink
      */
-    int m,n; cin >> m >> n;
-    Dinic<ll> flow(n+m+3);
-    int src=n+m+1, snk=n+m+2;
 
-    auto vleft = [&](int i) {return i;};
-    auto vright =[&](int i) {return m+i;}; // 1..n
-    auto revright=[&](int i) {return i-m;}; 
+    int n,q,s; cin >> n >> q >> s;
 
+    // Each group needs q nodes across n time windows
+    int states=q*n; 
 
-    string s; int d,t;
-    unordered_map<string, int> name; unordered_map<int, string> revname; int uid=0;
-    vector<EdgeRef> edgerefs(n+m+3); // extra but ok
+    // start ID offset for each block
+    int offset_qin=0;
+    int offset_qout = offset_qin + states; // starts after qin block
+    int offset_downlink = offset_qout + states; // starts after qout block
+    int src = offset_downlink+n;
+    int snk = src+1;
+    Dinic<ll> flow(snk+1);
 
-    FOR(i,0,m) {
-        cin >> s >> d;
-        name[s] = uid; revname[uid]=s;
-        edgerefs[uid]=flow.addEdge(src,vleft(uid),1);
-        FOR(j,0,d) {
-            cin >> t;
-            flow.addEdge(vleft(uid), vright(t), 1);
-        }
-        ++uid;
-    }
-    REP(i,1,n) {
-        flow.addEdge(vright(i),snk,2);
+    auto qin=[&](int i, int k) { return offset_qin + (k*q)  + i; };
+    auto qout=[&](int i, int k) { return offset_qout + (k*q) + i; };
+    auto dl=[&](int i) { return offset_downlink + i; };
+
+    unordered_map<int,int> sqmap;
+    int stoq;
+    FOR(i,0,s) {
+        cin >> stoq;
+        sqmap[i]=(--stoq);
     }
 
-    ll lo=0, hi=n; bool ok=true;
-    while (lo<hi) {
-        ll mid=lo + (hi-lo)/2;
-        FOR(i,0,m) {
-            ok=flow.updateEdge(edgerefs[i],mid);
-        }
-        flow.resetFlow();
-        ll val=flow.calc(src,snk);
-        if (val == (2*n)) {
-            hi=mid;
-        } else lo=mid+1;
-    }
-
-    
-    FOR(i,0,m) {
-        ok=flow.updateEdge(edgerefs[i],lo);
-    }
-    flow.resetFlow();
-    flow.calc(src,snk);
-
-    cout << lo << '\n';
-    vector<vi> ans(n+1);
-    FOR(i,0,m) {
-        for (auto& e : flow.adj[vleft(i)]) {
-            if (e.flow() > 0 && e.oc > 0 && sz(ans[revright(e.to)]) < 2) 
-                ans[revright(e.to)].pb(i);
+    ll qsz;
+    FOR(i,0,q) {
+        cin >> qsz;
+        FOR(j,0,n) {
+            flow.addEdge(qin(i,j), qout(i,j), qsz);
+            flow.addEdge(qout(i,j),dl(j),LLONG_MAX);
+            if (j!=n-1) flow.addEdge(qout(i,j),qin(i,j+1), LLONG_MAX);
         }
     }
 
-    REP(i,1,n) {
-        cout << "Day " << i << ": ";
-        for (auto j : ans[i]) {
-            cout << revname[j] << ' ';
+    ll d, tot=0;
+    FOR(i,0,n) {
+        cin >> d;
+        flow.addEdge(dl(i), snk, d);
+        FOR(j,0,s) {
+            cin >> qsz;
+            tot+=qsz;
+            flow.addEdge(src,qin(sqmap[j],i),qsz);
         }
-        cout << '\n';
     }
+
+    ll val = flow.calc(src,snk);
+    cout << (val==tot ? "possible\n" : "impossible\n");
 }

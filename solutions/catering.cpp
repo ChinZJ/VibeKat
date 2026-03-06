@@ -361,27 +361,59 @@ signed main() {
     
     /**
      * TODO
-     * Bidirectional edges. Observe that it is ok to duplicate here 
-     *      because it is costly for cycles to form
+     * Lower bound (every request must be enforced)
+     * 
+     * If an edge must carry at least lb units, split that flow into two parts
+     *      1. Mandatory flow (lb units)
+     *      2. Optional flow (0 to ub - lb) units - standard MCMF
+     * 
+     * For an edge u->v with bounds [lb, ub] and cost c
+     *      1. Replace it with u->v with capacity (ub-lb) and cost c
+     *      2. Add super source->v with capacity lb and cost c (mandatory flow)
+     *      3. Add u->super sink with capacity lb and cost 0 (drains mandatory flow)
      */
 
-    int P,R,L; cin >> P >> R >> L;
-    int bank1=0, bank2=1;
-    int src=R+2,snk=src+1;
-    MCMF<ll> flow(snk+1);
+    int n,k; cin >> n >> k;
+    int offset_coy=0;
+    int offset_reqin=offset_coy+1;
+    int offset_reqout=offset_reqin+n;
+    int src=offset_reqout+n;
+    int snk=src+1;
+    int ssrc=snk+1; // For lower bound
+    int ssnk=ssrc+1; // For lower bound
 
-    flow.addEdge(src,bank1,P,0);
-    flow.addEdge(bank2,snk,P,0);
+    MCMF<ll> flow(ssnk+1);
+    auto reqin=[&](int i) {return offset_reqin+i;};
+    auto reqout=[&](int i) {return offset_reqout+i;};
 
-    int E1,E2;
-    FOR(i,0,L) {
-        cin >> E1 >> E2;
-        E1+=2; E2+=2;
-        flow.addEdge(E1,E2,1,1);
-        flow.addEdge(E2,E1,1,1);
+    flow.addEdge(src, offset_coy, k, 0); // at most k chains
+    flow.addEdge(snk,src,LLONG_MAX,0); // Circulation edge
+
+    ll cst;
+    FOR(i,0,n) { // Source location.
+
+        /**
+         * lower bound for reqin(i) -> reqout(i) with [lb=1, ub=1]
+         * instead of capacity [0, cap]
+         * 
+         *  ub-lb = 0, no optional flow
+         *  If bounds were difference, then we will include
+         *  flow.addEdge(reqin(i), reqout(i), ub-lb, 0)
+         */
+        flow.addEdge(ssrc, reqout(i), 1, 0); // Inject mandatory unit
+        flow.addEdge(reqin(i), ssnk, 1, 0);  // Drain mandatory unit
+
+        // Chain can terminate
+        flow.addEdge(reqout(i), snk, 1, 0);
+            
+        FOR(j,i,n) {
+            cin >> cst;
+            // -1 is required because request is also 0 indexed
+            if (i!=0) flow.addEdge(reqout(i-1),reqin(j),1,cst);
+            else flow.addEdge(i,reqin(j),1,cst);
+        }
     }
-    auto [totf, totc] = flow.maxflow(src,snk);
-    if (totf!=P) cout << (P-totf) << " people left behind\n";
-    else cout << totc << '\n';
+    auto [totf,totc] = flow.maxflow(ssrc,ssnk);
+    cout << totc << '\n';
 }
 

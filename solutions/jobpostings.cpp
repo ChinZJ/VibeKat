@@ -117,21 +117,25 @@ struct EdgeRef {
 };
 
 enum EdgeClass{ 
-    IN_ALL, 
-    IN_SOME, 
-    IN_NONE 
+    IN_ALL,  // only bridge between S and T
+    IN_SOME, // can appear in min cut, but alternatives exist
+    IN_NONE, // never needed (residual e.c > 0)
 };
 
+#include <bits/extc++.h>  // for __gnu_pbds::priority_queue
+
 template<typename T>
-struct Dinic {
-    // Raw edge to be used by Dinic
+struct MCMF {
+    static constexpr T INF = numeric_limits<T>::max() / 4;
+
     struct Edge {
-        int to;  // destination vertex
-        int rev; // index of reverse edge
-                     
+        int to;
+        int rev;
+
         T c;     // current residual capacity
         T oc;    // original capacity
-                     
+        T cost;  // cost per unit flow
+
         [[nodiscard]] T flow() const { return max(oc - c, T(0)); }
     };
 
@@ -141,123 +145,155 @@ struct Dinic {
 
         T flow;
         T capacity;
+        T cost;
     };
-    
-    vector<int> lvl, ptr, q;
+
+    int N;
     vector<vector<Edge>> adj;
-    
-    explicit Dinic(int n) : lvl(n), ptr(n), q(n), adj(n) {}
-    
-    // Adds edge a -> b with capacity c and b -> a with capacity rcap
-    EdgeRef addEdge(int a, int b, T c, T rcap = 0) {
-        int const idx = static_cast<int>(adj[a].size());
-        adj[a].push_back({b, static_cast<int>(adj[b].size()), c, c});
-        adj[b].push_back({a, idx, rcap, rcap});
-        return {a, idx};
+    vector<int> seen;
+    vector<T> dist, pi;
+    vector<int> parV, parI;   // parent vertex + edge index (replaces Edge* par)
+
+    explicit MCMF(int N) : N(N), adj(N), seen(N), dist(N), pi(N), parV(N), parI(N) {}
+
+    // Add edge from -> to with capacity cap, cost cost
+    // Returns EdgeRef for queries / updates
+    EdgeRef addEdge(int from, int to, T cap, T cost) {
+        if (from == to) return {-1, -1};
+        int const idx = static_cast<int>(adj[from].size());
+        adj[from].push_back({to, static_cast<int>(adj[to].size()), cap, cap, cost});
+        adj[to].push_back({from, idx, 0, 0, -cost});
+        return {from, idx};
     }
 
     // Modify capacity of an existing edge
-        // Adjusts residual capacity to preserve current flow where possible
-        // If newCap < current flow, residual goes negative
-        // (Call resetFlow() + calc() to restore a valid flow)
-    // Returns true if resetFlow() is required before calling calc()
+        // Adjusts capacity while preserving current flow where possible
+        // Returns true if resetFlow() needs to be called prior to maxFlow()
     [[nodiscard]] bool updateEdge(EdgeRef ref, T newCap) {
+        if (ref.from < 0) return false;
         Edge& e = adj[ref.from][ref.idx];
-        T const currentFlow = e.oc - e.c; // Flow currently pushed
+        T const currentFlow = e.oc - e.c;
         e.oc = newCap;
         e.c = newCap - currentFlow;
-
         return newCap < currentFlow;
     }
 
     // Query flow on a specific edge
     [[nodiscard]] T getFlow(EdgeRef ref) const {
+        if (ref.from < 0) return 0;
         return adj[ref.from][ref.idx].flow();
     }
 
-    // Reset all flows to zero
-    void resetFlow() {
-        for (auto& edges : adj) {
-            for (auto& e : edges) {
-                e.c = e.oc;
-            }
-        }
+    // Qeury cost of a specific edge
+    [[nodiscard]] T getCost(EdgeRef ref) const {
+        if (ref.from < 0) return 0;
+        return adj[ref.from][ref.idx].cost;
     }
 
-    // Trace all active flows
-    // Callback signature: void(int from, int to, T flow, T capacity)
+    void resetFlow() {
+        for (auto& edges : adj)
+            for (auto& e : edges) e.c = e.oc;
+        fill(pi.begin(), pi.end(), T(0));
+    }
+
+    // 5-arg callback: (from, to, flow, capacity, cost)
     template<typename Func>
     void forEachFlow(Func&& func) const {
-        for (int u = 0; u < static_cast<int>(adj.size()); ++u) {
-            for (auto const& e : adj[u]) {
-                if (T const f = e.flow(); f > 0 && e.oc > 0) {
-                    func(u, e.to, f, e.oc);
-                }
-            }
-        }
+        for (int u = 0; u < N; ++u)
+            for (auto const& e : adj[u])
+                if (T const f = e.flow(); f > 0 && e.oc > 0)
+                    func(u, e.to, f, e.oc, e.cost);
     }
 
-    T dfs(int v, int t, T f) {
-        if (v == t || !f) return f; // Either reach sink
-                                    // Or no flow
-        for (int& i = ptr[v]; i < static_cast<int>(adj[v].size()); i++) {
-            Edge& e = adj[v][i];
-            if (lvl[e.to] == lvl[v] + 1) { // Only follow level graph
-                if (T p = dfs(e.to, t, min(f, e.c)); p) {
-                    e.c -= p; // Decrease forward edge
-                    adj[e.to][e.rev].c += p; // Increase backward edge
-                    return p;
+    // Dijkstra with Johnson's potentials
+    void path(int s) {
+        fill(seen.begin(), seen.end(), 0);
+        fill(dist.begin(), dist.end(), INF);
+        fill(parV.begin(), parV.end(), -1);
+        dist[s] = 0;
+
+        __gnu_pbds::priority_queue<pair<T, int>> q;
+        vector<typename decltype(q)::point_iterator> its(N);
+        q.push({0, s});
+
+        while (!q.empty()) {
+            int u = q.top().second; q.pop();
+            seen[u] = 1;
+            T di = dist[u] + pi[u];
+
+            for (int i = 0; i < static_cast<int>(adj[u].size()); ++i) {
+                Edge& e = adj[u][i];
+                if (!seen[e.to] && e.c > 0) {
+                    T val = di - pi[e.to] + e.cost;
+                    if (val < dist[e.to]) {
+                        dist[e.to] = val;
+                        parV[e.to] = u;
+                        parI[e.to] = i;
+                        if (its[e.to] == q.end())
+                            its[e.to] = q.push({-val, e.to});
+                        else
+                            q.modify(its[e.to], {-val, e.to});
+                    }
                 }
             }
         }
-        return 0;
+        for (int i = 0; i < N; i++)
+            pi[i] = min(pi[i] + dist[i], INF);
     }
-    
-    T calc(int s, int t) {
-        T flow = 0;
-        q[0] = s;
-        for (int L = 0; L < 31; L++) { // Scaling optimization
-                                       // Consider edges with large capacity, then smaller edges to reduce number of augmenting paths required
-            do {
-                // BFS to build level graph
-                lvl.assign(adj.size(), 0); // Distance from source, 0 = unreachable
-                ptr.assign(adj.size(), 0); // Tracks which edges (in the form of indices to adj) to try
-                int qi = 0, qe = 1; // manual queue
-                lvl[s] = 1;
-                while (qi < qe && !lvl[t]) {
-                    int v = q[qi++];
-                    for (Edge& e : adj[v]) { // Note that for each iteration, edge is constantly being updated, previous paths will not be considered
-                        if (!lvl[e.to] && e.c >> (30 - L)) { // simple check will just be e.c > 0 instead of optimization
-                            q[qe++] = e.to;
-                            lvl[e.to] = lvl[v] + 1;
+
+    // Returns {total_flow, total_cost}
+    pair<T, T> maxflow(int s, int t, T flowLimit = INF) {
+        T totflow = 0, totcost = 0;
+        while (totflow < flowLimit) {
+            path(s);
+            if (!seen[t]) break;
+
+            // Find bottleneck
+            T fl = flowLimit - totflow;
+            for (int v = t; v != s; v = parV[v])
+                fl = min(fl, adj[parV[v]][parI[v]].c);
+
+            // Augment
+            totflow += fl;
+            for (int v = t; v != s; v = parV[v]) {
+                Edge& e = adj[parV[v]][parI[v]];
+                totcost += fl * e.cost;
+                e.c -= fl;
+                adj[e.to][e.rev].c += fl;
+            }
+        }
+        return {totflow, totcost};
+    }
+
+    // Bellman-Ford potential init — call BEFORE maxflow() if negative costs
+    void setpi(int s) {
+        fill(pi.begin(), pi.end(), INF);
+        pi[s] = 0;
+        int it = N, ch = 1;
+        while (ch-- && it--) {
+            for (int i = 0; i < N; i++) {
+                if (pi[i] != INF) {
+                    for (Edge& e : adj[i]) {
+                        if (e.oc) {  // edge exists (original cap > 0)
+                            T v = pi[i] + e.cost;
+                            if (v < pi[e.to]) { pi[e.to] = v; ch = 1; }
                         }
                     }
                 }
-                
-                // Without optimization will require additional line
-                // if (!lvl[t]) break;
-
-                // DFS to find blocking flow
-                while (T const p = dfs(s, t, numeric_limits<T>::max())) {
-                    flow += p;
-                }
-            } while (lvl[t]); // lvl[t] is non zero if reachable from source
-        }
-        return flow;
-    }
-    
-    [[nodiscard]] bool leftOfMinCut(int a) const { return lvl[a] != 0; }
-
-    // Returns edges crossing the min cut
-    [[nodiscard]] std::vector<FlowEdge> minCutEdges() const {
-        std::vector<FlowEdge> cut;
-        for (int u = 0; u < static_cast<int>(adj.size()); ++u) {
-            if (!leftOfMinCut(u)) continue;
-            for (auto const& e : adj[u]) {
-                if (!leftOfMinCut(e.to) && e.oc > 0) {
-                    cut.push_back({u, e.to, e.flow(), e.oc});
-                }
             }
+        }
+        assert(it >= 0); // negative cost cycle if fails
+    }
+
+    [[nodiscard]] bool leftOfMinCut(int a) const { return seen[a]; }
+
+    [[nodiscard]] vector<FlowEdge> minCutEdges() const {
+        vector<FlowEdge> cut;
+        for (int u = 0; u < N; ++u) {
+            if (!leftOfMinCut(u)) continue;
+            for (auto const& e : adj[u])
+                if (!leftOfMinCut(e.to) && e.oc > 0)
+                    cut.push_back({u, e.to, e.flow(), e.oc, e.cost});
         }
         return cut;
     }
@@ -269,141 +305,103 @@ struct Dinic {
  */
     vector<bool> reachS, reachT;
 
-    // Called ONCE after calc() to build reachability sets
     void buildReachability(int s, int t) {
-        int n = static_cast<int>(adj.size());
-        reachS.assign(n, false);
-        reachT.assign(n, false);
+        reachS.assign(N, false);
+        reachT.assign(N, false);
+        vector<int> q(N);
 
-        // BFS from s via positive residual edges
-        int qi=0, qe=1;
+        int qi = 0, qe = 1;
         q[0] = s; reachS[s] = true;
         while (qi < qe) {
             int u = q[qi++];
-            for (auto const& e : adj[u]) {
+            for (auto const& e : adj[u])
                 if (!reachS[e.to] && e.c > 0) {
                     reachS[e.to] = true;
                     q[qe++] = e.to;
                 }
-            }
         }
 
-        // Reverse BFS from t via edges with positive residual going backwards
-        qi=0, qe=1;
+        qi = 0; qe = 1;
         q[0] = t; reachT[t] = true;
         while (qi < qe) {
-            int u=q[qi++];
-            for (auto const& e : adj[u]) {
-                // Can traverse backwards if reverse edge has capacity
+            int u = q[qi++];
+            for (auto const& e : adj[u])
                 if (!reachT[e.to] && adj[e.to][e.rev].c > 0) {
                     reachT[e.to] = true;
                     q[qe++] = e.to;
                 }
-            }
         }
     }
 
-    // Check if increasing capacity increases maxflow
     [[nodiscard]] bool isBottlneck(EdgeRef ref) const {
+        if (ref.from < 0) return false;
         auto const& e = adj[ref.from][ref.idx];
         if (e.c > 0) return false;
         return reachS[ref.from] && reachT[e.to];
     }
 
-    // Classifies if edge belongs to ALL / SOME / NONE min cuts
     [[nodiscard]] EdgeClass classifyingEdge(EdgeRef ref) const {
+        if (ref.from < 0) return IN_NONE;
         auto const& e = adj[ref.from][ref.idx];
         if (e.c > 0) return IN_NONE;
-
         if (reachS[ref.from] && reachT[e.to]) return IN_ALL;
         if (reachS[ref.from] || reachT[e.to]) return IN_SOME;
         return IN_NONE;
     }
 };
 
-static int edgeDisjoint(int n, vector<vll> const& adj, int s, int t) {
-    Dinic<ll> flow(n);
-
-    for (int u=0; u<n; ++u) {
-        for (ll v : adj[u]) {
-            flow.addEdge(u, v, 1);
-        }
-    }
-    return flow.calc(s,t);
-}
 // auto IN=[&](int t, int i, int j) { return 2*(t*n*n + i*n + j);};
 // auto OUT=[&](int t, int i, int j) { return 2*(t*n*n + i*n + j) + 1;};
 
 const ll MOD1 = 998244353;
 const ll MOD2 = 1000000007;
 
+vector<vector<int>> satis = {{-4,-3,-2,-1}, 
+                            {-8, -7, -6, -5},
+                            {-12, -11, -10, -9}};
+
 signed main() {
     cin.tie(0) -> sync_with_stdio(0);
     
     /**
-     * Bipartite matching
+     * Negative edge weights requires settign of potential
      */
-    int m,n; cin >> m >> n;
-    Dinic<ll> flow(n+m+3);
-    int src=n+m+1, snk=n+m+2;
-
-    auto vleft = [&](int i) {return i;};
-    auto vright =[&](int i) {return m+i;}; // 1..n
-    auto revright=[&](int i) {return i-m;}; 
-
-
-    string s; int d,t;
-    unordered_map<string, int> name; unordered_map<int, string> revname; int uid=0;
-    vector<EdgeRef> edgerefs(n+m+3); // extra but ok
-
-    FOR(i,0,m) {
-        cin >> s >> d;
-        name[s] = uid; revname[uid]=s;
-        edgerefs[uid]=flow.addEdge(src,vleft(uid),1);
-        FOR(j,0,d) {
-            cin >> t;
-            flow.addEdge(vleft(uid), vright(t), 1);
-        }
-        ++uid;
-    }
-    REP(i,1,n) {
-        flow.addEdge(vright(i),snk,2);
-    }
-
-    ll lo=0, hi=n; bool ok=true;
-    while (lo<hi) {
-        ll mid=lo + (hi-lo)/2;
-        FOR(i,0,m) {
-            ok=flow.updateEdge(edgerefs[i],mid);
-        }
-        flow.resetFlow();
-        ll val=flow.calc(src,snk);
-        if (val == (2*n)) {
-            hi=mid;
-        } else lo=mid+1;
-    }
-
     
-    FOR(i,0,m) {
-        ok=flow.updateEdge(edgerefs[i],lo);
-    }
-    flow.resetFlow();
-    flow.calc(src,snk);
+    int n, m;
+    while (cin >> n >> m) {
+        if (n==0 && m==0) break;
 
-    cout << lo << '\n';
-    vector<vi> ans(n+1);
-    FOR(i,0,m) {
-        for (auto& e : flow.adj[vleft(i)]) {
-            if (e.flow() > 0 && e.oc > 0 && sz(ans[revright(e.to)]) < 2) 
-                ans[revright(e.to)].pb(i);
+        int offset_stud=0;
+        auto stud=[&](int i) {return offset_stud + i;};
+        int offset_jobin=offset_stud + m;
+        auto job=[&](int i) {return offset_jobin + i;};
+        int src=offset_jobin+n;
+        int snk=src+1;
+        
+        MCMF<ll> flow(snk+1);
+        FOR(i,0,m) {
+            flow.addEdge(src,stud(i), 1,0);
         }
-    }
 
-    REP(i,1,n) {
-        cout << "Day " << i << ": ";
-        for (auto j : ans[i]) {
-            cout << revname[j] << ' ';
+        int p;
+        FOR(i,0,n) {
+            cin >> p;
+            flow.addEdge(job(i), snk, p, 0);
         }
-        cout << '\n';
+
+        int y, c1, c2, c3, c4;
+        FOR(i,0,m) {
+            cin >> y >> c1 >> c2 >> c3 >> c4; 
+            --y;
+
+            flow.addEdge(stud(i), job(c1), 1,satis[y][0]);
+            flow.addEdge(stud(i), job(c2), 1,satis[y][1]);
+            flow.addEdge(stud(i), job(c3), 1,satis[y][2]);
+            flow.addEdge(stud(i), job(c4), 1,satis[y][3]);
+        }
+        flow.setpi(src);
+        auto [totf, totc] = flow.maxflow(src,snk);
+        cout << -totc << '\n';
     }
 }
+

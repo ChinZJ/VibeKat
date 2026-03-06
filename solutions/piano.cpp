@@ -117,9 +117,9 @@ struct EdgeRef {
 };
 
 enum EdgeClass{ 
-    IN_ALL, 
-    IN_SOME, 
-    IN_NONE 
+    IN_ALL,  // only bridge between S and T
+    IN_SOME, // can appear in min cut, but alternatives exist
+    IN_NONE, // never needed (residual e.c > 0)
 };
 
 template<typename T>
@@ -267,6 +267,9 @@ struct Dinic {
                     CUT ANALYSIS AND BOTTLENECK DETECTION
 ================================================================================
  */
+    // reachS gives one valid min cut set (the smallest) from the source side
+    // reachT gives one valid min cut set (the smallest) from the sink side
+        // "middle vertices" are free to move between sides without changing the min cost
     vector<bool> reachS, reachT;
 
     // Called ONCE after calc() to build reachability sets
@@ -341,69 +344,56 @@ signed main() {
     cin.tie(0) -> sync_with_stdio(0);
     
     /**
-     * Bipartite matching
+     * TODO
+     * Note since we are only adding edges, no need to reset flow
+     * 
+     * Can solve greedily. Sort by start time and solve by end time
      */
-    int m,n; cin >> m >> n;
-    Dinic<ll> flow(n+m+3);
-    int src=n+m+1, snk=n+m+2;
 
-    auto vleft = [&](int i) {return i;};
-    auto vright =[&](int i) {return m+i;}; // 1..n
-    auto revright=[&](int i) {return i-m;}; 
+    int n; cin >> n;
+    while (n--) {
+        int m,p; cin >> m >> p;
 
+        int offset_days=0;
+        int offset_pianos=0+100;
+        int src=offset_pianos+m;
+        int snk=src+1;
+        Dinic<ll> flow(snk+1);
+        auto dd=[&](int i) {return offset_days+i;};
+        auto pp=[&](int i) {return offset_pianos+i;};
 
-    string s; int d,t;
-    unordered_map<string, int> name; unordered_map<int, string> revname; int uid=0;
-    vector<EdgeRef> edgerefs(n+m+3); // extra but ok
-
-    FOR(i,0,m) {
-        cin >> s >> d;
-        name[s] = uid; revname[uid]=s;
-        edgerefs[uid]=flow.addEdge(src,vleft(uid),1);
-        FOR(j,0,d) {
-            cin >> t;
-            flow.addEdge(vleft(uid), vright(t), 1);
-        }
-        ++uid;
-    }
-    REP(i,1,n) {
-        flow.addEdge(vright(i),snk,2);
-    }
-
-    ll lo=0, hi=n; bool ok=true;
-    while (lo<hi) {
-        ll mid=lo + (hi-lo)/2;
         FOR(i,0,m) {
-            ok=flow.updateEdge(edgerefs[i],mid);
+            flow.addEdge(src,pp(i),1);
         }
-        flow.resetFlow();
-        ll val=flow.calc(src,snk);
-        if (val == (2*n)) {
-            hi=mid;
-        } else lo=mid+1;
-    }
-
-    
-    FOR(i,0,m) {
-        ok=flow.updateEdge(edgerefs[i],lo);
-    }
-    flow.resetFlow();
-    flow.calc(src,snk);
-
-    cout << lo << '\n';
-    vector<vi> ans(n+1);
-    FOR(i,0,m) {
-        for (auto& e : flow.adj[vleft(i)]) {
-            if (e.flow() > 0 && e.oc > 0 && sz(ans[revright(e.to)]) < 2) 
-                ans[revright(e.to)].pb(i);
+        FOR(i,0,100) {
+            flow.addEdge(dd(i),snk,p/2);
         }
-    }
 
-    REP(i,1,n) {
-        cout << "Day " << i << ": ";
-        for (auto j : ans[i]) {
-            cout << revname[j] << ' ';
+        int b,e;
+        vector<pii> days; days.reserve(m);
+        FOR(i,0,m) {
+            cin >> b >> e;
+            --b; --e;
+            days.pb({b,e});
+            REP(j,b,e) {
+                if (int rm=j%7; rm!=5 && rm!=6) flow.addEdge(pp(i),dd(j),1);
+            }
         }
-        cout << '\n';
+
+        if (ll val=flow.calc(src,snk); val==m) {
+            cout << "fine\n";
+        } else {
+            FOR(i,0,m) {
+                auto [bb,ee] = days[i];
+                REP(j,bb,ee) {
+                    if (int rm=j%7; rm==5 || rm==6) flow.addEdge(pp(i),dd(j),1);
+                }
+            }
+            if (val+=flow.calc(src,snk); val==m) {
+                cout << "weekend work\n";
+            } else {
+                cout << "serious trouble\n";
+            }
+        }
     }
 }

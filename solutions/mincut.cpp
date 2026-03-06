@@ -117,9 +117,9 @@ struct EdgeRef {
 };
 
 enum EdgeClass{ 
-    IN_ALL, 
-    IN_SOME, 
-    IN_NONE 
+    IN_ALL,  // only bridge between S and T
+    IN_SOME, // can appear in min cut, but alternatives exist
+    IN_NONE, // never needed (residual e.c > 0)
 };
 
 template<typename T>
@@ -341,69 +341,26 @@ signed main() {
     cin.tie(0) -> sync_with_stdio(0);
     
     /**
-     * Bipartite matching
+     * 
      */
-    int m,n; cin >> m >> n;
-    Dinic<ll> flow(n+m+3);
-    int src=n+m+1, snk=n+m+2;
 
-    auto vleft = [&](int i) {return i;};
-    auto vright =[&](int i) {return m+i;}; // 1..n
-    auto revright=[&](int i) {return i-m;}; 
+    int n,m,s,t; cin >> n >> m >> s >> t;
+    Dinic<ll> flow(n);
 
-
-    string s; int d,t;
-    unordered_map<string, int> name; unordered_map<int, string> revname; int uid=0;
-    vector<EdgeRef> edgerefs(n+m+3); // extra but ok
-
+    int u,v; ll w;
+    vector<EdgeRef> edgerefs; edgerefs.reserve(m);
     FOR(i,0,m) {
-        cin >> s >> d;
-        name[s] = uid; revname[uid]=s;
-        edgerefs[uid]=flow.addEdge(src,vleft(uid),1);
-        FOR(j,0,d) {
-            cin >> t;
-            flow.addEdge(vleft(uid), vright(t), 1);
-        }
-        ++uid;
-    }
-    REP(i,1,n) {
-        flow.addEdge(vright(i),snk,2);
+        cin >> u >> v >> w;
+        edgerefs.pb(flow.addEdge(u,v,w));
     }
 
-    ll lo=0, hi=n; bool ok=true;
-    while (lo<hi) {
-        ll mid=lo + (hi-lo)/2;
-        FOR(i,0,m) {
-            ok=flow.updateEdge(edgerefs[i],mid);
-        }
-        flow.resetFlow();
-        ll val=flow.calc(src,snk);
-        if (val == (2*n)) {
-            hi=mid;
-        } else lo=mid+1;
+    ll val=flow.calc(s,t);
+    flow.buildReachability(s,t);
+    vi cut;
+    FOR(i, 0, n) {
+        if (flow.reachS[i]) cut.pb(i);
     }
 
-    
-    FOR(i,0,m) {
-        ok=flow.updateEdge(edgerefs[i],lo);
-    }
-    flow.resetFlow();
-    flow.calc(src,snk);
-
-    cout << lo << '\n';
-    vector<vi> ans(n+1);
-    FOR(i,0,m) {
-        for (auto& e : flow.adj[vleft(i)]) {
-            if (e.flow() > 0 && e.oc > 0 && sz(ans[revright(e.to)]) < 2) 
-                ans[revright(e.to)].pb(i);
-        }
-    }
-
-    REP(i,1,n) {
-        cout << "Day " << i << ": ";
-        for (auto j : ans[i]) {
-            cout << revname[j] << ' ';
-        }
-        cout << '\n';
-    }
+    cout << sz(cut) << '\n';
+    for (int x : cut) cout << x << '\n';
 }
