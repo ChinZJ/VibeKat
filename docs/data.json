@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-03-06T11:24:47.826707Z",
+  "generated_at": "2026-03-23T03:08:13.615059Z",
   "username": "chin-zhen-jie\r",
-  "total_score": 1124.7,
-  "calculated_score": 1123.7,
-  "problems_solved": 330,
+  "total_score": 1345.1,
+  "calculated_score": 1344.1,
+  "problems_solved": 370,
   "problems": [
     {
       "id": "includescoring",
       "name": "#include<scoring>",
-      "difficulty": 4.3,
+      "difficulty": 4.2,
       "url": "https://open.kattis.com/problems/includescoring"
     },
     {
       "id": "multiplication",
       "name": "(More) Multiplication",
-      "difficulty": 5.9,
+      "difficulty": 6.0,
       "url": "https://open.kattis.com/problems/multiplication"
     },
     {
@@ -32,7 +32,7 @@
     {
       "id": "different",
       "name": "A Different Problem",
-      "difficulty": 2.0,
+      "difficulty": 2.3,
       "url": "https://open.kattis.com/problems/different"
     },
     {
@@ -40,6 +40,12 @@
       "name": "A Rational Sequence 2",
       "difficulty": 2.3,
       "url": "https://open.kattis.com/problems/rationalsequence2"
+    },
+    {
+      "id": "aplusorminusb",
+      "name": "A+B or A-B?",
+      "difficulty": 8.6,
+      "url": "https://open.kattis.com/problems/aplusorminusb"
     },
     {
       "id": "acm",
@@ -62,25 +68,25 @@
     {
       "id": "administrativeproblems",
       "name": "Administrative Difficulties",
-      "difficulty": 5.1,
+      "difficulty": 5.2,
       "url": "https://open.kattis.com/problems/administrativeproblems"
     },
     {
       "id": "dream",
       "name": "All Just A Dream",
-      "difficulty": 5.1,
+      "difficulty": 5.2,
       "url": "https://open.kattis.com/problems/dream"
     },
     {
       "id": "almennirborgarar",
       "name": "Almennir Borgarar",
-      "difficulty": 3.7,
+      "difficulty": 3.6,
       "url": "https://open.kattis.com/problems/almennirborgarar"
     },
     {
       "id": "almostunionfind",
       "name": "Almost Union-Find",
-      "difficulty": 3.9,
+      "difficulty": 4.0,
       "url": "https://open.kattis.com/problems/almostunionfind"
     },
     {
@@ -108,6 +114,12 @@
       "url": "https://open.kattis.com/problems/amanda"
     },
     {
+      "id": "antidiagonalgame",
+      "name": "Anti-Diagonal Game",
+      "difficulty": 6.1,
+      "url": "https://open.kattis.com/problems/antidiagonalgame"
+    },
+    {
       "id": "antipalindrome",
       "name": "Anti-Palindrome",
       "difficulty": 2.1,
@@ -118,6 +130,12 @@
       "name": "Apaxiaaaaaaaaaaaans!",
       "difficulty": 1.3,
       "url": "https://open.kattis.com/problems/apaxiaaans"
+    },
+    {
+      "id": "aqueducts",
+      "name": "Aqueduct Construction",
+      "difficulty": 6.6,
+      "url": "https://open.kattis.com/problems/aqueducts"
     },
     {
       "id": "armystrengtheasy",
@@ -134,8 +152,14 @@
     {
       "id": "arrivingontime",
       "name": "Arriving on Time",
-      "difficulty": 4.2,
+      "difficulty": 4.3,
       "url": "https://open.kattis.com/problems/arrivingontime"
+    },
+    {
+      "id": "artsandcomputing",
+      "name": "Arts and Computing Students",
+      "difficulty": 8.4,
+      "url": "https://open.kattis.com/problems/artsandcomputing"
     },
     {
       "id": "aspenavenue",
@@ -164,7 +188,7 @@
     {
       "id": "averagespeed",
       "name": "Average Speed",
-      "difficulty": 3.3,
+      "difficulty": 3.2,
       "url": "https://open.kattis.com/problems/averagespeed"
     },
     {
@@ -182,7 +206,7 @@
     {
       "id": "basicprogramming1",
       "name": "Basic Programming 1",
-      "difficulty": 4.1,
+      "difficulty": 3.9,
       "url": "https://open.kattis.com/problems/basicprogramming1"
     },
     {
@@ -224,7 +248,7 @@
     {
       "id": "bestrelayteam",
       "name": "Best Relay Team",
-      "difficulty": 1.6,
+      "difficulty": 1.7,
       "url": "https://open.kattis.com/problems/bestrelayteam"
     },
     {
@@ -236,13 +260,13 @@
     {
       "id": "bigtruck",
       "name": "Big Truck",
-      "difficulty": 2.7,
+      "difficulty": 2.8,
       "url": "https://open.kattis.com/problems/bigtruck"
     },
     {
       "id": "bst",
       "name": "Binary search tree",
-      "difficulty": 4.6,
+      "difficulty": 3.7,
       "url": "https://open.kattis.com/problems/bst"
     },
     {
@@ -294,22 +318,34 @@
       "url": "https://open.kattis.com/problems/bobby"
     },
     {
+      "id": "bookcircle",
+      "name": "Book Circle",
+      "difficulty": 4.9,
+      "url": "https://open.kattis.com/problems/bookcircle"
+    },
+    {
       "id": "booking",
       "name": "Booking",
-      "difficulty": 4.9,
+      "difficulty": 4.8,
       "url": "https://open.kattis.com/problems/booking"
     },
     {
       "id": "bossbattle",
       "name": "Boss Battle",
-      "difficulty": 2.2,
+      "difficulty": 2.1,
       "url": "https://open.kattis.com/problems/bossbattle"
     },
     {
       "id": "bridgesandtunnels",
       "name": "Bridges and Tunnels",
-      "difficulty": 2.3,
+      "difficulty": 2.4,
       "url": "https://open.kattis.com/problems/bridgesandtunnels"
+    },
+    {
+      "id": "brillianceofwings",
+      "name": "Brilliance of Wings",
+      "difficulty": 1.7,
+      "url": "https://open.kattis.com/problems/brillianceofwings"
     },
     {
       "id": "brokenswords",
@@ -330,10 +366,28 @@
       "url": "https://open.kattis.com/problems/bungeejumping"
     },
     {
+      "id": "busplanning",
+      "name": "Bus Planning",
+      "difficulty": 5.5,
+      "url": "https://open.kattis.com/problems/busplanning"
+    },
+    {
       "id": "busticket",
       "name": "Bus Ticket",
       "difficulty": 3.3,
       "url": "https://open.kattis.com/problems/busticket"
+    },
+    {
+      "id": "busyroads",
+      "name": "Busy Roads",
+      "difficulty": 3.4,
+      "url": "https://open.kattis.com/problems/busyroads"
+    },
+    {
+      "id": "bioferd",
+      "name": "B\u00ed\u00f3fer\u00f0",
+      "difficulty": 3.7,
+      "url": "https://open.kattis.com/problems/bioferd"
     },
     {
       "id": "cakeymccakeface",
@@ -350,7 +404,7 @@
     {
       "id": "canonical",
       "name": "Canonical Coin Systems",
-      "difficulty": 5.0,
+      "difficulty": 4.9,
       "url": "https://open.kattis.com/problems/canonical"
     },
     {
@@ -374,8 +428,14 @@
     {
       "id": "catering",
       "name": "Catering",
-      "difficulty": 3.9,
+      "difficulty": 4.0,
       "url": "https://open.kattis.com/problems/catering"
+    },
+    {
+      "id": "chainslides",
+      "name": "Chained maimai Slides",
+      "difficulty": 6.8,
+      "url": "https://open.kattis.com/problems/chainslides"
     },
     {
       "id": "checkingforcorrectness",
@@ -392,7 +452,7 @@
     {
       "id": "chess",
       "name": "Chess",
-      "difficulty": 3.0,
+      "difficulty": 2.9,
       "url": "https://open.kattis.com/problems/chess"
     },
     {
@@ -410,13 +470,13 @@
     {
       "id": "classrooms",
       "name": "Classrooms",
-      "difficulty": 4.4,
+      "difficulty": 4.5,
       "url": "https://open.kattis.com/problems/classrooms"
     },
     {
       "id": "climbingstairs",
       "name": "Climbing Stairs",
-      "difficulty": 5.2,
+      "difficulty": 4.9,
       "url": "https://open.kattis.com/problems/climbingstairs"
     },
     {
@@ -430,6 +490,12 @@
       "name": "Code Cleanups",
       "difficulty": 3.4,
       "url": "https://open.kattis.com/problems/codecleanups"
+    },
+    {
+      "id": "codenames",
+      "name": "Code Names",
+      "difficulty": 5.2,
+      "url": "https://open.kattis.com/problems/codenames"
     },
     {
       "id": "combinationlock",
@@ -452,19 +518,19 @@
     {
       "id": "compoundwords",
       "name": "Compound Words",
-      "difficulty": 1.7,
+      "difficulty": 1.6,
       "url": "https://open.kattis.com/problems/compoundwords"
     },
     {
       "id": "conformity",
       "name": "Conformity",
-      "difficulty": 1.5,
+      "difficulty": 1.4,
       "url": "https://open.kattis.com/problems/conformity"
     },
     {
       "id": "connectthedots",
       "name": "Connect the Dots",
-      "difficulty": 3.4,
+      "difficulty": 3.3,
       "url": "https://open.kattis.com/problems/connectthedots"
     },
     {
@@ -494,7 +560,7 @@
     {
       "id": "councilling",
       "name": "Councilling",
-      "difficulty": 5.8,
+      "difficulty": 5.7,
       "url": "https://open.kattis.com/problems/councilling"
     },
     {
@@ -506,8 +572,14 @@
     {
       "id": "creditcard",
       "name": "Credit Card Payment",
-      "difficulty": 5.0,
+      "difficulty": 4.8,
       "url": "https://open.kattis.com/problems/creditcard"
+    },
+    {
+      "id": "cursedcactuschallenge",
+      "name": "Cursed Cactus Challenge",
+      "difficulty": 6.2,
+      "url": "https://open.kattis.com/problems/cursedcactuschallenge"
     },
     {
       "id": "dasblinkenlights",
@@ -522,6 +594,12 @@
       "url": "https://open.kattis.com/problems/deathtaxes"
     },
     {
+      "id": "debellatio",
+      "name": "Debellatio",
+      "difficulty": 5.8,
+      "url": "https://open.kattis.com/problems/debellatio"
+    },
+    {
       "id": "debugging",
       "name": "Debugging",
       "difficulty": 5.8,
@@ -532,6 +610,12 @@
       "name": "Delicious Bubble Tea",
       "difficulty": 2.2,
       "url": "https://open.kattis.com/problems/bubbletea"
+    },
+    {
+      "id": "dependencyflood",
+      "name": "Dependency Flood",
+      "difficulty": 5.3,
+      "url": "https://open.kattis.com/problems/dependencyflood"
     },
     {
       "id": "detaileddifferences",
@@ -554,13 +638,13 @@
     {
       "id": "downtime",
       "name": "Disastrous Downtime",
-      "difficulty": 2.7,
+      "difficulty": 2.8,
       "url": "https://open.kattis.com/problems/downtime"
     },
     {
       "id": "ballotboxes",
       "name": "Distributing Ballot Boxes",
-      "difficulty": 2.4,
+      "difficulty": 2.6,
       "url": "https://open.kattis.com/problems/ballotboxes"
     },
     {
@@ -578,13 +662,13 @@
     {
       "id": "doctorkattis",
       "name": "Doctor Kattis",
-      "difficulty": 4.5,
+      "difficulty": 4.4,
       "url": "https://open.kattis.com/problems/doctorkattis"
     },
     {
       "id": "dominos",
       "name": "Dominos",
-      "difficulty": 4.1,
+      "difficulty": 4.2,
       "url": "https://open.kattis.com/problems/dominos"
     },
     {
@@ -606,10 +690,28 @@
       "url": "https://open.kattis.com/problems/driversdilemma"
     },
     {
+      "id": "dejavu2",
+      "name": "D\u00e9j\u00e0 vu",
+      "difficulty": 8.3,
+      "url": "https://open.kattis.com/problems/dejavu2"
+    },
+    {
       "id": "earlywinter",
       "name": "Early Winter",
       "difficulty": 2.0,
       "url": "https://open.kattis.com/problems/earlywinter"
+    },
+    {
+      "id": "eastereggs",
+      "name": "Easter Eggs",
+      "difficulty": 4.3,
+      "url": "https://open.kattis.com/problems/eastereggs"
+    },
+    {
+      "id": "easygoingworkplace",
+      "name": "Easygoing Workplace",
+      "difficulty": 6.0,
+      "url": "https://open.kattis.com/problems/easygoingworkplace"
     },
     {
       "id": "eenymeeny",
@@ -624,9 +726,15 @@
       "url": "https://open.kattis.com/problems/eligibility"
     },
     {
+      "id": "endangeredsafarizone",
+      "name": "Endangered Safari Zone",
+      "difficulty": 8.0,
+      "url": "https://open.kattis.com/problems/endangeredsafarizone"
+    },
+    {
       "id": "enemydivision",
       "name": "Enemy Division",
-      "difficulty": 5.9,
+      "difficulty": 5.8,
       "url": "https://open.kattis.com/problems/enemydivision"
     },
     {
@@ -656,13 +764,13 @@
     {
       "id": "expeditiouscubing",
       "name": "Expeditious Cubing",
-      "difficulty": 4.8,
+      "difficulty": 4.7,
       "url": "https://open.kattis.com/problems/expeditiouscubing"
     },
     {
       "id": "fairbandwidthsharing",
       "name": "Fair Bandwidth Sharing",
-      "difficulty": 5.7,
+      "difficulty": 5.5,
       "url": "https://open.kattis.com/problems/fairbandwidthsharing"
     },
     {
@@ -672,9 +780,15 @@
       "url": "https://open.kattis.com/problems/faktor"
     },
     {
+      "id": "falsesanctum",
+      "name": "False Sanctum",
+      "difficulty": 6.3,
+      "url": "https://open.kattis.com/problems/falsesanctum"
+    },
+    {
       "id": "fenwick",
       "name": "Fenwick Tree",
-      "difficulty": 3.4,
+      "difficulty": 3.3,
       "url": "https://open.kattis.com/problems/fenwick"
     },
     {
@@ -684,33 +798,39 @@
       "url": "https://open.kattis.com/problems/ferryloading3"
     },
     {
+      "id": "fickettconjecturepolyomino",
+      "name": "Fickett's Conjecture for Polyominoes",
+      "difficulty": 6.5,
+      "url": "https://open.kattis.com/problems/fickettconjecturepolyomino"
+    },
+    {
       "id": "findmyfamily",
       "name": "Find my Family",
-      "difficulty": 4.0,
+      "difficulty": 4.1,
       "url": "https://open.kattis.com/problems/findmyfamily"
     },
     {
       "id": "firefly",
       "name": "Firefly",
-      "difficulty": 2.3,
+      "difficulty": 2.4,
       "url": "https://open.kattis.com/problems/firefly"
     },
     {
       "id": "floodingfields",
       "name": "Flooding Fields",
-      "difficulty": 5.9,
+      "difficulty": 5.8,
       "url": "https://open.kattis.com/problems/floodingfields"
     },
     {
       "id": "flowshop",
       "name": "Flow Shop",
-      "difficulty": 2.1,
+      "difficulty": 2.0,
       "url": "https://open.kattis.com/problems/flowshop"
     },
     {
       "id": "foolingaround",
       "name": "Fooling Around",
-      "difficulty": 7.0,
+      "difficulty": 6.9,
       "url": "https://open.kattis.com/problems/foolingaround"
     },
     {
@@ -740,14 +860,20 @@
     {
       "id": "frustratedqueue",
       "name": "Frustrated Queue",
-      "difficulty": 4.9,
+      "difficulty": 4.8,
       "url": "https://open.kattis.com/problems/frustratedqueue"
     },
     {
       "id": "gcpc",
       "name": "Galactic Collegiate Programming Contest",
-      "difficulty": 4.8,
+      "difficulty": 4.9,
       "url": "https://open.kattis.com/problems/gcpc"
+    },
+    {
+      "id": "galacticsabotage",
+      "name": "Galactic Sabotage",
+      "difficulty": 5.2,
+      "url": "https://open.kattis.com/problems/galacticsabotage"
     },
     {
       "id": "gamenight",
@@ -758,7 +884,7 @@
     {
       "id": "gamerank",
       "name": "Game Rank",
-      "difficulty": 4.0,
+      "difficulty": 4.1,
       "url": "https://open.kattis.com/problems/gamerank"
     },
     {
@@ -776,13 +902,25 @@
     {
       "id": "generalizedrecursivefunctions",
       "name": "Generalized Recursive Functions",
-      "difficulty": 4.1,
+      "difficulty": 4.0,
       "url": "https://open.kattis.com/problems/generalizedrecursivefunctions"
+    },
+    {
+      "id": "georgettemegeorgetteyou",
+      "name": "Georgette Me, Georgette You",
+      "difficulty": 4.2,
+      "url": "https://open.kattis.com/problems/georgettemegeorgetteyou"
+    },
+    {
+      "id": "globalwarming",
+      "name": "Global Warming",
+      "difficulty": 5.8,
+      "url": "https://open.kattis.com/problems/globalwarming"
     },
     {
       "id": "golf",
       "name": "Golf",
-      "difficulty": 6.6,
+      "difficulty": 6.4,
       "url": "https://open.kattis.com/problems/golf"
     },
     {
@@ -794,7 +932,7 @@
     {
       "id": "screen",
       "name": "Hacking the Screen",
-      "difficulty": 3.8,
+      "difficulty": 3.9,
       "url": "https://open.kattis.com/problems/screen"
     },
     {
@@ -828,16 +966,34 @@
       "url": "https://open.kattis.com/problems/hello"
     },
     {
+      "id": "helpeeveeplseh",
+      "name": "Help Eevee Pls Eh",
+      "difficulty": 5.8,
+      "url": "https://open.kattis.com/problems/helpeeveeplseh"
+    },
+    {
       "id": "helpme",
       "name": "Help Me With The Game",
       "difficulty": 2.7,
       "url": "https://open.kattis.com/problems/helpme"
     },
     {
+      "id": "heroleveling",
+      "name": "Hero Leveling",
+      "difficulty": 8.1,
+      "url": "https://open.kattis.com/problems/heroleveling"
+    },
+    {
       "id": "heroesofvelmar",
       "name": "Heroes of Velmar",
       "difficulty": 2.3,
       "url": "https://open.kattis.com/problems/heroesofvelmar"
+    },
+    {
+      "id": "historicexhibition",
+      "name": "Historic Exhibition",
+      "difficulty": 4.6,
+      "url": "https://open.kattis.com/problems/historicexhibition"
     },
     {
       "id": "apaxianparent",
@@ -848,13 +1004,13 @@
     {
       "id": "horrorfilmnight",
       "name": "Horror Film Night",
-      "difficulty": 3.2,
+      "difficulty": 3.3,
       "url": "https://open.kattis.com/problems/horrorfilmnight"
     },
     {
       "id": "hotdogs",
       "name": "Hot Dogs in Manhattan",
-      "difficulty": 5.3,
+      "difficulty": 5.4,
       "url": "https://open.kattis.com/problems/hotdogs"
     },
     {
@@ -870,6 +1026,12 @@
       "url": "https://open.kattis.com/problems/humancannonball"
     },
     {
+      "id": "hungrypiplups",
+      "name": "Hungry Piplups",
+      "difficulty": 6.1,
+      "url": "https://open.kattis.com/problems/hungrypiplups"
+    },
+    {
       "id": "hydrasheads",
       "name": "Hydra's Heads",
       "difficulty": 2.1,
@@ -882,16 +1044,34 @@
       "url": "https://open.kattis.com/problems/tutorial"
     },
     {
+      "id": "imperfection",
+      "name": "Imperfection",
+      "difficulty": 5.3,
+      "url": "https://open.kattis.com/problems/imperfection"
+    },
+    {
       "id": "implementationirregularities",
       "name": "Implementation Irregularities",
       "difficulty": 3.2,
       "url": "https://open.kattis.com/problems/implementationirregularities"
     },
     {
+      "id": "incaseofinvasion",
+      "name": "In Case of an Invasion, Please...",
+      "difficulty": 6.1,
+      "url": "https://open.kattis.com/problems/incaseofinvasion"
+    },
+    {
       "id": "inflagrantedelicto",
       "name": "In Flagrante Delicto",
       "difficulty": 4.6,
       "url": "https://open.kattis.com/problems/inflagrantedelicto"
+    },
+    {
+      "id": "indoorienteering",
+      "name": "Indoorienteering",
+      "difficulty": 6.7,
+      "url": "https://open.kattis.com/problems/indoorienteering"
     },
     {
       "id": "integerlists",
@@ -912,15 +1092,21 @@
       "url": "https://open.kattis.com/problems/interpreter"
     },
     {
+      "id": "intervalscheduling2",
+      "name": "Interval Scheduling",
+      "difficulty": 5.6,
+      "url": "https://open.kattis.com/problems/intervalscheduling2"
+    },
+    {
       "id": "caching",
       "name": "Introspective Caching",
-      "difficulty": 5.5,
+      "difficulty": 5.4,
       "url": "https://open.kattis.com/problems/caching"
     },
     {
       "id": "inverteddeck",
       "name": "Inverted Deck",
-      "difficulty": 4.1,
+      "difficulty": 4.2,
       "url": "https://open.kattis.com/problems/inverteddeck"
     },
     {
@@ -942,6 +1128,12 @@
       "url": "https://open.kattis.com/problems/janeeyre"
     },
     {
+      "id": "jauntthroughthegarden",
+      "name": "Jaunt Through the Garden",
+      "difficulty": 6.2,
+      "url": "https://open.kattis.com/problems/jauntthroughthegarden"
+    },
+    {
       "id": "jobpostings",
       "name": "Job Postings",
       "difficulty": 7.7,
@@ -950,13 +1142,19 @@
     {
       "id": "joinstrings",
       "name": "Join Strings",
-      "difficulty": 4.1,
+      "difficulty": 4.2,
       "url": "https://open.kattis.com/problems/joinstrings"
+    },
+    {
+      "id": "joiningpoints",
+      "name": "Joining Points",
+      "difficulty": 5.8,
+      "url": "https://open.kattis.com/problems/joiningpoints"
     },
     {
       "id": "jollyjumpers",
       "name": "Jolly Jumpers",
-      "difficulty": 2.6,
+      "difficulty": 2.5,
       "url": "https://open.kattis.com/problems/jollyjumpers"
     },
     {
@@ -968,7 +1166,7 @@
     {
       "id": "juggler",
       "name": "Juggler",
-      "difficulty": 4.4,
+      "difficulty": 4.5,
       "url": "https://open.kattis.com/problems/juggler"
     },
     {
@@ -980,13 +1178,13 @@
     {
       "id": "jumpingyoshi",
       "name": "Jumping Yoshi",
-      "difficulty": 5.0,
+      "difficulty": 5.2,
       "url": "https://open.kattis.com/problems/jumpingyoshi"
     },
     {
       "id": "jupiter",
       "name": "Jupiter Orbiter",
-      "difficulty": 7.3,
+      "difficulty": 7.2,
       "url": "https://open.kattis.com/problems/jupiter"
     },
     {
@@ -1004,19 +1202,31 @@
     {
       "id": "kattissquest",
       "name": "Kattis's Quest",
-      "difficulty": 3.9,
+      "difficulty": 4.2,
       "url": "https://open.kattis.com/problems/kattissquest"
+    },
+    {
+      "id": "keeptheordering",
+      "name": "Keep the Ordering",
+      "difficulty": 6.2,
+      "url": "https://open.kattis.com/problems/keeptheordering"
+    },
+    {
+      "id": "keyitemrecovery",
+      "name": "Key Item Recovery",
+      "difficulty": 5.1,
+      "url": "https://open.kattis.com/problems/keyitemrecovery"
     },
     {
       "id": "kitchencombinatorics",
       "name": "Kitchen Combinatorics",
-      "difficulty": 4.6,
+      "difficulty": 4.5,
       "url": "https://open.kattis.com/problems/kitchencombinatorics"
     },
     {
       "id": "knightjump",
       "name": "Knight Jump",
-      "difficulty": 2.0,
+      "difficulty": 2.1,
       "url": "https://open.kattis.com/problems/knightjump"
     },
     {
@@ -1030,6 +1240,12 @@
       "name": "Kri\u017ealjka",
       "difficulty": 1.7,
       "url": "https://open.kattis.com/problems/krizaljka"
+    },
+    {
+      "id": "largedifferences",
+      "name": "Large Differences",
+      "difficulty": 8.4,
+      "url": "https://open.kattis.com/problems/largedifferences"
     },
     {
       "id": "lastfactorialdigit",
@@ -1052,7 +1268,7 @@
     {
       "id": "listentoyourboss",
       "name": "Listen To Your Boss",
-      "difficulty": 4.1,
+      "difficulty": 4.2,
       "url": "https://open.kattis.com/problems/listentoyourboss"
     },
     {
@@ -1094,7 +1310,7 @@
     {
       "id": "magicalrunes",
       "name": "Magical Runes",
-      "difficulty": 3.1,
+      "difficulty": 3.2,
       "url": "https://open.kattis.com/problems/magicalrunes"
     },
     {
@@ -1108,6 +1324,12 @@
       "name": "Mancala",
       "difficulty": 2.0,
       "url": "https://open.kattis.com/problems/mancala"
+    },
+    {
+      "id": "mapcolouring",
+      "name": "Map Colouring",
+      "difficulty": 4.0,
+      "url": "https://open.kattis.com/problems/mapcolouring"
     },
     {
       "id": "marko",
@@ -1130,13 +1352,13 @@
     {
       "id": "keypad",
       "name": "Matrix Keypad",
-      "difficulty": 3.5,
+      "difficulty": 3.4,
       "url": "https://open.kattis.com/problems/keypad"
     },
     {
       "id": "maxflow",
       "name": "Maximum Flow",
-      "difficulty": 3.2,
+      "difficulty": 3.1,
       "url": "https://open.kattis.com/problems/maxflow"
     },
     {
@@ -1166,7 +1388,7 @@
     {
       "id": "mincostmaxflow",
       "name": "Minimum Cost Maximum Flow",
-      "difficulty": 4.5,
+      "difficulty": 4.4,
       "url": "https://open.kattis.com/problems/mincostmaxflow"
     },
     {
@@ -1196,7 +1418,7 @@
     {
       "id": "moscowdream",
       "name": "Moscow Dream",
-      "difficulty": 1.7,
+      "difficulty": 1.8,
       "url": "https://open.kattis.com/problems/moscowdream"
     },
     {
@@ -1208,7 +1430,7 @@
     {
       "id": "moviecollection",
       "name": "Movie Collection",
-      "difficulty": 3.0,
+      "difficulty": 3.1,
       "url": "https://open.kattis.com/problems/moviecollection"
     },
     {
@@ -1220,7 +1442,7 @@
     {
       "id": "more10",
       "name": "M\u00e5rten's Theorem",
-      "difficulty": 6.1,
+      "difficulty": 6.3,
       "url": "https://open.kattis.com/problems/more10"
     },
     {
@@ -1238,19 +1460,19 @@
     {
       "id": "natrij",
       "name": "Natrij",
-      "difficulty": 2.9,
+      "difficulty": 3.0,
       "url": "https://open.kattis.com/problems/natrij"
     },
     {
       "id": "nesteddolls",
       "name": "Nested Dolls",
-      "difficulty": 5.9,
+      "difficulty": 5.8,
       "url": "https://open.kattis.com/problems/nesteddolls"
     },
     {
       "id": "nicknames",
       "name": "Nicknames",
-      "difficulty": 2.1,
+      "difficulty": 2.2,
       "url": "https://open.kattis.com/problems/nicknames"
     },
     {
@@ -1280,13 +1502,13 @@
     {
       "id": "onechicken",
       "name": "One Chicken Per Person!",
-      "difficulty": 1.6,
+      "difficulty": 1.5,
       "url": "https://open.kattis.com/problems/onechicken"
     },
     {
       "id": "opensource",
       "name": "Open Source",
-      "difficulty": 3.4,
+      "difficulty": 3.3,
       "url": "https://open.kattis.com/problems/opensource"
     },
     {
@@ -1406,7 +1628,7 @@
     {
       "id": "popularitycontest",
       "name": "Popularity Contest",
-      "difficulty": 1.8,
+      "difficulty": 1.7,
       "url": "https://open.kattis.com/problems/popularitycontest"
     },
     {
@@ -1418,13 +1640,13 @@
     {
       "id": "powers",
       "name": "Powers and Modulus",
-      "difficulty": 4.4,
+      "difficulty": 4.3,
       "url": "https://open.kattis.com/problems/powers"
     },
     {
       "id": "provincesandgold",
       "name": "Provinces and Gold",
-      "difficulty": 1.5,
+      "difficulty": 1.4,
       "url": "https://open.kattis.com/problems/provincesandgold"
     },
     {
@@ -1484,7 +1706,7 @@
     {
       "id": "reconstructingtapeart",
       "name": "Reconstructing Tape Art",
-      "difficulty": 4.6,
+      "difficulty": 4.7,
       "url": "https://open.kattis.com/problems/reconstructingtapeart"
     },
     {
@@ -1502,7 +1724,7 @@
     {
       "id": "retribution",
       "name": "Retribution!",
-      "difficulty": 5.3,
+      "difficulty": 5.4,
       "url": "https://open.kattis.com/problems/retribution"
     },
     {
@@ -1514,13 +1736,13 @@
     {
       "id": "rimski",
       "name": "Rimski",
-      "difficulty": 3.5,
+      "difficulty": 3.6,
       "url": "https://open.kattis.com/problems/rimski"
     },
     {
       "id": "romans",
       "name": "Roaming Romans",
-      "difficulty": 1.8,
+      "difficulty": 1.7,
       "url": "https://open.kattis.com/problems/romans"
     },
     {
@@ -1538,13 +1760,13 @@
     {
       "id": "rockpaperscissors",
       "name": "Rock-Paper-Scissors Tournament",
-      "difficulty": 3.5,
+      "difficulty": 3.4,
       "url": "https://open.kattis.com/problems/rockpaperscissors"
     },
     {
       "id": "romanholidays",
       "name": "Roman Holidays",
-      "difficulty": 5.7,
+      "difficulty": 5.8,
       "url": "https://open.kattis.com/problems/romanholidays"
     },
     {
@@ -1568,7 +1790,7 @@
     {
       "id": "scalingrecipe",
       "name": "Scaling Recipe",
-      "difficulty": 1.9,
+      "difficulty": 2.0,
       "url": "https://open.kattis.com/problems/scalingrecipe"
     },
     {
@@ -1598,7 +1820,7 @@
     {
       "id": "secretsantacycles",
       "name": "Secret Santa Cycles",
-      "difficulty": 6.7,
+      "difficulty": 6.8,
       "url": "https://open.kattis.com/problems/secretsantacycles"
     },
     {
@@ -1610,13 +1832,19 @@
     {
       "id": "sendmoremoney",
       "name": "Send More Money",
-      "difficulty": 6.9,
+      "difficulty": 6.3,
       "url": "https://open.kattis.com/problems/sendmoremoney"
+    },
+    {
+      "id": "sentryrobots",
+      "name": "Sentry Robots",
+      "difficulty": 3.4,
+      "url": "https://open.kattis.com/problems/sentryrobots"
     },
     {
       "id": "amoebas",
       "name": "Sheba's Amoebas",
-      "difficulty": 1.6,
+      "difficulty": 1.5,
       "url": "https://open.kattis.com/problems/amoebas"
     },
     {
@@ -1628,19 +1856,19 @@
     {
       "id": "sim",
       "name": "Sim",
-      "difficulty": 3.4,
+      "difficulty": 3.3,
       "url": "https://open.kattis.com/problems/sim"
     },
     {
       "id": "spider",
       "name": "Simon the Spider",
-      "difficulty": 5.6,
+      "difficulty": 6.0,
       "url": "https://open.kattis.com/problems/spider"
     },
     {
       "id": "sjecista",
       "name": "Sjecista",
-      "difficulty": 1.7,
+      "difficulty": 1.8,
       "url": "https://open.kattis.com/problems/sjecista"
     },
     {
@@ -1682,7 +1910,7 @@
     {
       "id": "stack",
       "name": "Stack Construction",
-      "difficulty": 6.9,
+      "difficulty": 5.8,
       "url": "https://open.kattis.com/problems/stack"
     },
     {
@@ -1690,6 +1918,12 @@
       "name": "Stuck In A Time Loop",
       "difficulty": 1.2,
       "url": "https://open.kattis.com/problems/timeloop"
+    },
+    {
+      "id": "stystiskogarleidangurinn",
+      "name": "Stysti sk\u00f3garlei\u00f0angurinn",
+      "difficulty": 3.1,
+      "url": "https://open.kattis.com/problems/stystiskogarleidangurinn"
     },
     {
       "id": "supercomputer",
@@ -1724,7 +1958,7 @@
     {
       "id": "taxing",
       "name": "Taxing Problem",
-      "difficulty": 5.0,
+      "difficulty": 4.9,
       "url": "https://open.kattis.com/problems/taxing"
     },
     {
@@ -1742,13 +1976,13 @@
     {
       "id": "darkness",
       "name": "The Darkness",
-      "difficulty": 6.7,
+      "difficulty": 6.8,
       "url": "https://open.kattis.com/problems/darkness"
     },
     {
       "id": "thekingofthenorth",
       "name": "The King of the North",
-      "difficulty": 5.6,
+      "difficulty": 5.4,
       "url": "https://open.kattis.com/problems/thekingofthenorth"
     },
     {
@@ -1782,10 +2016,10 @@
       "url": "https://open.kattis.com/problems/tictactoe2"
     },
     {
-      "id": "temperature",
+      "id": "timetravellingtemperatures",
       "name": "Time Travelling Temperatures",
       "difficulty": 2.0,
-      "url": "https://open.kattis.com/problems/temperature"
+      "url": "https://open.kattis.com/problems/timetravellingtemperatures"
     },
     {
       "id": "timezones",
@@ -1796,7 +2030,7 @@
     {
       "id": "tomography",
       "name": "Tomography",
-      "difficulty": 3.5,
+      "difficulty": 3.7,
       "url": "https://open.kattis.com/problems/tomography"
     },
     {
@@ -1814,7 +2048,7 @@
     {
       "id": "trainpassengers",
       "name": "Train Passengers",
-      "difficulty": 2.8,
+      "difficulty": 2.7,
       "url": "https://open.kattis.com/problems/trainpassengers"
     },
     {
@@ -1832,7 +2066,7 @@
     {
       "id": "treehopping",
       "name": "Tree Hopping",
-      "difficulty": 5.9,
+      "difficulty": 5.8,
       "url": "https://open.kattis.com/problems/treehopping"
     },
     {
@@ -1850,7 +2084,7 @@
     {
       "id": "turtlemaster",
       "name": "Turtle Master",
-      "difficulty": 2.6,
+      "difficulty": 2.5,
       "url": "https://open.kattis.com/problems/turtlemaster"
     },
     {
@@ -1910,7 +2144,7 @@
     {
       "id": "weakvertices",
       "name": "Weak Vertices",
-      "difficulty": 1.5,
+      "difficulty": 1.4,
       "url": "https://open.kattis.com/problems/weakvertices"
     },
     {
@@ -1922,7 +2156,7 @@
     {
       "id": "wheresmyinternet",
       "name": "Where's My Internet??",
-      "difficulty": 2.0,
+      "difficulty": 1.9,
       "url": "https://open.kattis.com/problems/wheresmyinternet"
     },
     {
@@ -1934,13 +2168,13 @@
     {
       "id": "workout",
       "name": "Workout for a Dumbbell",
-      "difficulty": 5.2,
+      "difficulty": 5.3,
       "url": "https://open.kattis.com/problems/workout"
     },
     {
       "id": "worstweather",
       "name": "Worst Weather Ever",
-      "difficulty": 6.9,
+      "difficulty": 6.7,
       "url": "https://open.kattis.com/problems/worstweather"
     },
     {
@@ -1964,7 +2198,7 @@
     {
       "id": "zipfsong",
       "name": "Zipf's Song",
-      "difficulty": 4.4,
+      "difficulty": 4.3,
       "url": "https://open.kattis.com/problems/zipfsong"
     },
     {
@@ -1984,29 +2218,46 @@
       "name": "\u00d6stg\u00f6tska",
       "difficulty": 2.0,
       "url": "https://open.kattis.com/problems/ostgotska"
+    },
+    {
+      "id": "floppy",
+      "name": "Floppy Music",
+      "difficulty": 0.0,
+      "url": "https://open.kattis.com/problems/floppy"
     }
   ],
   "missing_solutions": [
+    "aqueducts",
+    "bioferd",
     "coconut",
     "conformity",
+    "debellatio",
     "detaileddifferences",
+    "floppy",
+    "globalwarming",
+    "historicexhibition",
+    "incaseofinvasion",
     "lastfactorialdigit",
     "lostmap",
     "millionairemadness",
     "numberfun",
     "pot",
+    "sentryrobots",
     "sortofsorting",
     "swaptosort",
     "t9spelling",
+    "timetravellingtemperatures",
     "twostones",
     "weakvertices",
     "workstations"
   ],
-  "extra_solutions": [],
+  "extra_solutions": [
+    "temperature"
+  ],
   "difficulty_breakdown": {
-    "Medium (2.8-5.5)": 144,
-    "Hard (\u22655.6)": 44,
-    "Easy (<2.8)": 142
+    "Medium (2.8-5.5)": 162,
+    "Hard (\u22655.6)": 65,
+    "Easy (<2.8)": 143
   },
   "daily_activity": {
     "2025-12-07": 65,
@@ -2039,12 +2290,17 @@
     "2026-02-18": 2,
     "2026-02-21": 8,
     "2026-02-22": 16,
-    "2026-03-04": 1,
-    "2026-03-02": 12,
-    "2026-03-06": 4,
-    "2026-03-05": 1,
+    "2026-02-23": 1,
     "2026-03-01": 2,
-    "2026-02-23": 1
+    "2026-03-02": 12,
+    "2026-03-04": 1,
+    "2026-03-05": 1,
+    "2026-03-06": 4,
+    "2026-03-09": 8,
+    "2026-03-08": 13,
+    "2026-03-07": 4,
+    "2026-03-23": 3,
+    "2026-03-22": 4
   },
   "score_history": {
     "2026-01-24": 596.4,
@@ -2054,7 +2310,8 @@
     "2026-02-16": 900.4,
     "2026-02-21": 969.3,
     "2026-02-22": 1032.9,
-    "2026-03-06": 1124.7
+    "2026-03-06": 1124.7,
+    "2026-03-23": 1345.1
   },
   "todos": [],
   "daily_tasks": {},
